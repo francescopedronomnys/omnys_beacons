@@ -1,7 +1,7 @@
 //  Copyright (c) 2018 Loup Inc.
 //  Licensed under Apache License v2.0
 
-part of beacons;
+part of omnys_beacons;
 
 class _Codec {
   static BeaconsResult decodeResult(String data) =>
@@ -48,15 +48,15 @@ class _Codec {
   }
 
   static String platformSpecific({
-    @required String android,
-    @required String ios,
+    required String android,
+    required String ios,
   }) {
     if (Platform.isAndroid) {
       return android;
     } else if (Platform.isIOS) {
       return ios;
     } else {
-      throw new BeaconsException(
+      throw BeaconsException(
           'Unsupported platform: ${Platform.operatingSystem}');
     }
   }
@@ -64,7 +64,7 @@ class _Codec {
 
 class _JsonCodec {
   static BeaconsResult resultFromJson(Map<String, dynamic> json) =>
-      new BeaconsResult._(
+      BeaconsResult._(
         json['isSuccessful'],
         json['error'] != null ? resultErrorFromJson(json['error']) : null,
       );
@@ -72,21 +72,21 @@ class _JsonCodec {
   static BeaconsResultError resultErrorFromJson(Map<String, dynamic> json) {
     final BeaconsResultErrorType type = _mapResultErrorTypeJson(json['type']);
 
-    final BeaconsResultError error = new BeaconsResultError._(
+    final BeaconsResultError error = BeaconsResultError._(
       type,
       json['message'],
       null,
     );
 
     if (json.containsKey('fatal') && json['fatal']) {
-      throw new BeaconsException(error.message);
+      throw BeaconsException(error.message);
     }
 
     return error;
   }
 
   static RangingResult rangingResultFromJson(Map<String, dynamic> json) =>
-      new RangingResult._(
+      RangingResult._(
         json['isSuccessful'],
         json['error'] != null ? resultErrorFromJson(json['error']) : null,
         json['region'] != null ? beaconRegionFromJson(json['region']) : null,
@@ -94,11 +94,11 @@ class _JsonCodec {
             ? (json['data'] as List<dynamic>)
                 .map((it) => beaconFromJson(it as Map<String, dynamic>))
                 .toList()
-            : null,
+            : List.empty(),
       );
 
   static MonitoringResult monitoringResultFromJson(Map<String, dynamic> json) =>
-      new MonitoringResult._(
+      MonitoringResult._(
         json['isSuccessful'],
         json['error'] != null ? resultErrorFromJson(json['error']) : null,
         json['region'] != null ? beaconRegionFromJson(json['region']) : null,
@@ -107,13 +107,13 @@ class _JsonCodec {
 
   static BackgroundMonitoringEvent backgroundMonitoringEventFromJson(
           Map<String, dynamic> json) =>
-      new BackgroundMonitoringEvent._(
+      BackgroundMonitoringEvent._(
         backgroundMonitoringEventTypeFromJson(json['type']),
         beaconRegionFromJson(json['region']),
         monitoringStateFromJson(json['state']),
       );
 
-  static Beacon beaconFromJson(Map<String, dynamic> json) => new Beacon._(
+  static Beacon beaconFromJson(Map<String, dynamic> json) => Beacon._(
       json['ids'],
       _Codec.parseJsonNumber(json['distance']),
       json['rssi'],
@@ -122,10 +122,10 @@ class _JsonCodec {
       json['platformCustoms']);
 
   static BeaconRegion beaconRegionFromJson(Map<String, dynamic> json) =>
-      new BeaconRegion(
+      BeaconRegion(
         identifier: json['identifier'],
         ids: json['ids'],
-        bluetoothAddress: json['bluetoothAddress'],
+        //TODO restore?? bluetoothAddress: json['bluetoothAddress'],
       );
 
   static BeaconProximity proximityFromJson(String jsonValue) {
@@ -139,8 +139,7 @@ class _JsonCodec {
       case 'far':
         return BeaconProximity.far;
       default:
-        assert(false, 'cannot parse json to BeaconProximity: $jsonValue');
-        return null;
+        throw Exception('cannot parse json to BeaconProximity: $jsonValue');
     }
   }
 
@@ -154,9 +153,8 @@ class _JsonCodec {
       case 'didDetermineState':
         return BackgroundMonitoringEventType.didDetermineState;
       default:
-        assert(false,
+        throw Exception(
             'cannot parse json to BackgroundMonitoringEventType: $jsonValue');
-        return null;
     }
   }
 
@@ -169,8 +167,7 @@ class _JsonCodec {
       case 'unknown':
         return MonitoringState.unknown;
       default:
-        assert(false, 'cannot parse json to MonitoringState: $jsonValue');
-        return null;
+        throw Exception('cannot parse json to MonitoringState: $jsonValue');
     }
   }
 
@@ -198,6 +195,6 @@ class _JsonCodec {
   static Map<String, dynamic> regionToJson(BeaconRegion region) => {
         'identifier': region.identifier,
         'ids': region.ids,
-        'bluetoothAddress': region.bluetoothAddress,
+        //TODO restore?? 'bluetoothAddress': region.bluetoothAddress,
       };
 }

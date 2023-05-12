@@ -1,7 +1,7 @@
 //  Copyright (c) 2018 Loup Inc.
 //  Licensed under Apache License v2.0
 
-part of beacons;
+part of omnys_beacons;
 
 class Beacon {
   Beacon._(this.ids, this.distance, this.rssi, this.rawData,

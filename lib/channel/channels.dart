@@ -1,21 +1,21 @@
 //  Copyright (c) 2018 Loup Inc.
 //  Licensed under Apache License v2.0
 
-part of beacons;
+part of omnys_beacons;
 
 class _Channels {
   static const String _loggingTag = 'beacons';
 
-  static const MethodChannel _channel = const MethodChannel('beacons');
+  static const MethodChannel _channel = MethodChannel('omnys_beacons');
 
   static final StreamsChannel _rangingChannel =
-      new StreamsChannel('beacons/ranging');
+      StreamsChannel('omnys_beacons/ranging');
 
   static final StreamsChannel _monitoringChannel =
-      new StreamsChannel('beacons/monitoring');
+      StreamsChannel('omnys_beacons/monitoring');
 
   static final StreamsChannel _backgroundMonitoringChannel =
-      new StreamsChannel('beacons/backgroundMonitoring');
+      StreamsChannel('omnys_beacons/backgroundMonitoring');
 
   Future<BeaconsResult> checkStatus(_StatusRequest request) async {
     final response = await _invokeChannelMethod(

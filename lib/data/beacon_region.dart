@@ -1,26 +1,24 @@
 //  Copyright (c) 2018 Loup Inc.
 //  Licensed under Apache License v2.0
 
-part of beacons;
+part of omnys_beacons;
 
 class BeaconRegion {
   BeaconRegion({
-    @required this.identifier,
+    required this.identifier,
     this.ids = const [],
-    this.bluetoothAddress,
   });
 
   final String identifier;
   final List<dynamic> ids;
-  final String bluetoothAddress;
 }
 
 class BeaconRegionIBeacon extends BeaconRegion {
   BeaconRegionIBeacon({
-    @required String identifier,
-    @required String proximityUUID,
-    int major,
-    int minor,
+    required String identifier,
+    required String proximityUUID,
+    int? major,
+    int? minor,
   }) : super(
           identifier: identifier,
           ids: [],

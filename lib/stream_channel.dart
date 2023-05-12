@@ -15,15 +15,15 @@ class StreamsChannel {
   int _lastId = 0;
 
   Stream<dynamic> receiveBroadcastStream([dynamic arguments]) {
-    final MethodChannel methodChannel = new MethodChannel(name, codec);
+    final MethodChannel methodChannel = MethodChannel(name, codec);
 
     final id = ++_lastId;
     final handlerName = '$name#$id';
 
-    StreamController<dynamic> controller;
-    controller = new StreamController<dynamic>.broadcast(onListen: () async {
+    late StreamController<dynamic> controller;
+    controller = StreamController<dynamic>.broadcast(onListen: () async {
       ServicesBinding.instance.defaultBinaryMessenger
-          .setMessageHandler(handlerName, (ByteData reply) async {
+          .setMessageHandler(handlerName, (ByteData? reply) async {
         if (reply == null) {
           controller.close();
         } else {
@@ -39,7 +39,7 @@ class StreamsChannel {
       try {
         await methodChannel.invokeMethod('listen#$id', arguments);
       } catch (exception, stack) {
-        FlutterError.reportError(new FlutterErrorDetails(
+        FlutterError.reportError(FlutterErrorDetails(
           exception: exception,
           stack: stack,
           library: 'streams_channel',
@@ -53,7 +53,7 @@ class StreamsChannel {
       try {
         await methodChannel.invokeMethod('cancel#$id', arguments);
       } catch (exception, stack) {
-        FlutterError.reportError(new FlutterErrorDetails(
+        FlutterError.reportError(FlutterErrorDetails(
           exception: exception,
           stack: stack,
           library: 'streams_channel',

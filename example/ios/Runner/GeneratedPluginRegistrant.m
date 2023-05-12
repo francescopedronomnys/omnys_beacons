@@ -2,25 +2,20 @@
 //  Generated file. Do not edit.
 //
 
+// clang-format off
+
 #import "GeneratedPluginRegistrant.h"
 
-#if __has_include(<beacons/BeaconsPlugin.h>)
-#import <beacons/BeaconsPlugin.h>
+#if __has_include(<omnys_beacons/OmnysBeaconsPlugin.h>)
+#import <omnys_beacons/OmnysBeaconsPlugin.h>
 #else
-@import beacons;
-#endif
-
-#if __has_include(<flutter_local_notifications/FlutterLocalNotificationsPlugin.h>)
-#import <flutter_local_notifications/FlutterLocalNotificationsPlugin.h>
-#else
-@import flutter_local_notifications;
+@import omnys_beacons;
 #endif
 
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
-  [BeaconsPlugin registerWithRegistrar:[registry registrarForPlugin:@"BeaconsPlugin"]];
-  [FlutterLocalNotificationsPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterLocalNotificationsPlugin"]];
+  [OmnysBeaconsPlugin registerWithRegistrar:[registry registrarForPlugin:@"OmnysBeaconsPlugin"]];
 }
 
 @end

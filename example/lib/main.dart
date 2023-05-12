@@ -1,95 +1,75 @@
-//  Copyright (c) 2018 Loup Inc.
-//  Licensed under Apache License v2.0
-
-import 'package:beacons/beacons.dart';
-import 'package:beacons_example/secondary_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'tab_monitoring.dart';
-import 'tab_ranging.dart';
+import 'package:intl/intl.dart';
+import 'package:omnys_beacons/omnys_beacons.dart';
 
-void main() => runApp(new MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
-  MyApp() {
-    Beacons.loggingEnabled = true;
-
-    int notifId = 0;
-
-    Beacons.backgroundMonitoringEvents().listen((event) {
-      FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-          new FlutterLocalNotificationsPlugin();
-      AndroidInitializationSettings initializationSettingsAndroid =
-          new AndroidInitializationSettings('app_icon');
-      IOSInitializationSettings initializationSettingsIOS =
-          new IOSInitializationSettings();
-      InitializationSettings initializationSettings =
-          new InitializationSettings(
-              initializationSettingsAndroid, initializationSettingsIOS);
-      flutterLocalNotificationsPlugin.initialize(initializationSettings);
-
-      AndroidNotificationDetails androidPlatformChannelSpecifics =
-          new AndroidNotificationDetails('your channel id', 'your channel name',
-              'your channel description');
-      IOSNotificationDetails iOSPlatformChannelSpecifics =
-          new IOSNotificationDetails();
-      NotificationDetails platformChannelSpecifics = new NotificationDetails(
-          androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
-      flutterLocalNotificationsPlugin.show(
-        ++notifId,
-        event.type.toString(),
-        event.state.toString(),
-        platformChannelSpecifics,
-      );
-    });
-
-    Beacons.configure(BeaconsSettings(
-      android: BeaconsSettingsAndroid(
-        logs: BeaconsSettingsAndroidLogs.info,
-      ),
-    ));
+  MyApp({super.key}) {
+    OmnysBeacons.loggingEnabled = true;
   }
 
   @override
-  _MyAppState createState() => new _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
+  final log = List<String>.empty(growable: true);
+
+  @override
+  void initState() {
+    super.initState();
+
+    OmnysBeacons.configure(const BeaconsSettings(
+      android: BeaconsSettingsAndroid(
+        logs: BeaconsSettingsAndroidLogs.verbose,
+      ),
+    ));
+
+    OmnysBeacons.backgroundMonitoringEvents().listen((result) {
+      print(
+          "BackgroundMonitoring result: ${result.region.identifier} ${result.state}");
+      /*final DateFormat dateFormatter = DateFormat('yyyy-MM-dd');
+      final DateFormat timeFormatter = DateFormat('HH:mm:ss.SSS');
+      final now = DateTime.now();
+      setState(() {
+        log.add(
+            "${dateFormatter.format(now)} ${timeFormatter.format(now)} - monitoring event: $result");
+      });*/
+    });
+
+    OmnysBeacons.monitoring(
+      region: BeaconRegion(
+          identifier: "BlueUp", ids: ["ACFD065E-C3C0-11E3-9BBE-1A514932AC01"]),
+      inBackground: true,
+      permission: const LocationPermission(
+        ios: LocationPermissionIOS.always,
+        android: LocationPermissionAndroid.fine,
+      ),
+    ).listen((result) {
+      print("Monitoring result: $result");
+      final DateFormat dateFormatter = DateFormat('yyyy-MM-dd');
+      final DateFormat timeFormatter = DateFormat('HH:mm:ss.SSS');
+      final now = DateTime.now();
+      setState(() {
+        log.add(
+            "${dateFormatter.format(now)} ${timeFormatter.format(now)} - monitoring event: $result");
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new CupertinoTabScaffold(
-        tabBar: new CupertinoTabBar(
-          items: <BottomNavigationBarItem>[
-            new BottomNavigationBarItem(
-              title: new Text('Track'),
-              icon: new Icon(Icons.location_searching),
-            ),
-            new BottomNavigationBarItem(
-              title: new Text('Monitoring'),
-              icon: new Icon(Icons.settings_remote),
-            ),
-            new BottomNavigationBarItem(
-              title: new Text('Settings'),
-              icon: new Icon(Icons.settings_input_antenna),
-            ),
-          ],
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Plugin example app'),
         ),
-        tabBuilder: (BuildContext context, int index) {
-          return new CupertinoTabView(
-            builder: (BuildContext context) {
-              switch (index) {
-                case 0:
-                  return new RangingTab();
-                case 1:
-                  return new MonitoringTab();
-                default:
-                  return new SettingsScreen();
-              }
-            },
-          );
-        },
+        body: Center(
+          child: Text(log.join("\n")),
+        ),
       ),
     );
   }

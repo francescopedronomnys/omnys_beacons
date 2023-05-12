@@ -14,17 +14,17 @@ class Channel {
     self.locationClient = locationClient
   }
   
-  func register(on plugin: SwiftBeaconsPlugin) {
-    let methodChannel = FlutterMethodChannel(name: "beacons", binaryMessenger: plugin.registrar.messenger())
+  func register(on plugin: SwiftOmnysBeaconsPlugin) {
+    let methodChannel = FlutterMethodChannel(name: "omnys_beacons", binaryMessenger: plugin.registrar.messenger())
     methodChannel.setMethodCallHandler(handleMethodCall(_:result:))
     
-    let rangingChannel = FlutterStreamsChannel(name: "beacons/ranging", binaryMessenger: plugin.registrar.messenger())
+    let rangingChannel = FlutterStreamsChannel(name: "omnys_beacons/ranging", binaryMessenger: plugin.registrar.messenger())
     rangingChannel.setStreamHandlerFactory { _ in Handler(locationClient: self.locationClient, kind: .ranging) }
     
-    let monitoringChannel = FlutterStreamsChannel(name: "beacons/monitoring", binaryMessenger: plugin.registrar.messenger())
+    let monitoringChannel = FlutterStreamsChannel(name: "omnys_beacons/monitoring", binaryMessenger: plugin.registrar.messenger())
     monitoringChannel.setStreamHandlerFactory { _ in Handler(locationClient: self.locationClient, kind: .monitoring) }
     
-    let backgroundMonitoringChannel = FlutterStreamsChannel(name: "beacons/backgroundMonitoring", binaryMessenger: plugin.registrar.messenger())
+    let backgroundMonitoringChannel = FlutterStreamsChannel(name: "omnys_beacons/backgroundMonitoring", binaryMessenger: plugin.registrar.messenger())
     backgroundMonitoringChannel.setStreamHandlerFactory { _ in BackgroundMonitoringHandler(locationClient: self.locationClient) }
   }
   

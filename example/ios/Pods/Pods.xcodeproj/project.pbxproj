@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -15,404 +15,317 @@
 			dependencies = (
 			);
 			name = Flutter;
-			productName = Flutter;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		05ECC760C9D7504880BB52A24CCCF976 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341ECA23DBE529AEC599F161437FA1D /* Settings.swift */; };
-		0A2C0BC8AAFF044684736B8E4755D3AC /* BackgroundMonitoringEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA65284F7657FC341524D614A2C2A4 /* BackgroundMonitoringEvent.swift */; };
-		1B95814FF64072C44EB90D9C6CBD9C1D /* RNLBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1FF1DB4A04BE41272CE5176B924390 /* RNLBeacon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1EE1D1B18B75F4973EC68082940D747A /* flutter_local_notifications-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E3F96143418A811F3596273CD2ABFE /* flutter_local_notifications-dummy.m */; };
-		20FB3157A46C60DCABC4FEE753F1F40B /* StatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E359824B44A402715D1E004C11A48 /* StatusRequest.swift */; };
-		28025A0EC01655AB29E7DEDF339BEFFB /* NotificationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10B978BD92332F3D4A8DF054C26388 /* NotificationTime.m */; };
-		2A10F3BAD808B57D10EA4D04BBCF3836 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EFBEC33114171902EBCEF7114DA18DB /* Foundation.framework */; };
-		3310432F369BABE48CDBCDE100EFEA24 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF50B07F069917865A6C56AFB5D40B /* Beacon.swift */; };
-		3483FEE8766657BA6C10053DFFA5AFF2 /* NotificationDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E21DB45824B021B92C0C348247B2C7 /* NotificationDetails.m */; };
-		387BF7B16DA55143A9C429D6C8714781 /* Codec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573569A395781B00F409B84EF740973A /* Codec.swift */; };
-		3A314E972C96F50E95F20ACEAE74FFA3 /* NotificationDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = ADC218760CC9ADEBFDD9044EA381BB15 /* NotificationDetails.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D07D1A59F67592FA9C7A7C885234CD2 /* RNLBeaconParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8813CBE6BE90BC9481F3EF590BBA5669 /* RNLBeaconParser.m */; };
-		3E55B2AEE4060D4EFB634E66E6EC18DE /* NotificationTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 72A9924F7F5C65CBCCEA6BF647ED66CC /* NotificationTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4060969B22C19BC42AF2C98E3E8821D2 /* BeaconsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B0332D3A387FB4C01F37A7DACDCDCA /* BeaconsPlugin.m */; };
-		41AFFA22BD0D6E29DD45BBF9C4EF7467 /* Pods-Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C932BD54DBB963102A89E0F9E3948 /* Pods-Runner-dummy.m */; };
-		42E6F65A8A80B87FB14AD553AA834F1E /* RNLSignalMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD645B4D0C79FA421D1DFB6E62C6295 /* RNLSignalMeasurement.m */; };
-		43FCFE6E93CB429290DDB93E499FD935 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EFBEC33114171902EBCEF7114DA18DB /* Foundation.framework */; };
-		4A4BDCF96E43C8DDE4B0A0099B6913E4 /* FlutterLocalNotificationsPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = CB167A52EF4C533B06A4713D298EE56D /* FlutterLocalNotificationsPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B31FE9A3B8A8CBF24876105D04930BC /* RNLBeacon+Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 026ABCB15F96AE4E12E3F5136A90859A /* RNLBeacon+Distance.m */; };
-		52C310111E4FBF6A1B8149CCD26E714C /* RNLBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 400894E0E95F0858DB2575D7ADA88435 /* RNLBeacon.m */; };
-		553DCE72282A360104EE245DB40294EB /* SwiftBeaconsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC46E5013A63ECFC050BDF5CECB16D2 /* SwiftBeaconsPlugin.swift */; };
-		59C2A9D159CE68933A7CDEDDAEDA2CF3 /* beacons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46660BA830154B3FDBAECFF6CED3B3A5 /* beacons-dummy.m */; };
-		624BC3A5E41E2999B32D1125A83F3A74 /* MonitoringState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967EAA382779963B3A5ACBA1C16ADEF /* MonitoringState.swift */; };
-		62556FF9E900C1C7DA1BACD1C756730F /* RNLBeaconTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FF23F9A5B1CAA35A43EB0E3F925979 /* RNLBeaconTracker.m */; };
-		74C0CC329B8668516A3703965BF478BB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC4F89280AB856E4B8B2B4981843C6 /* Result.swift */; };
-		76551E2F87AED8F28D14A2B6BB7741AF /* RNLURLBeaconCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD0805F0DEBC379D80D494DEFDC4E /* RNLURLBeaconCompressor.m */; };
-		76931BF8FE2EB917C48586EAFB992826 /* RNLLocationTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = C6978A16AD402B410231EA6DB8732ADB /* RNLLocationTracker.m */; };
-		7807121C99998C94C078F4E984A17155 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DFFEC48B76426A4B4301ACFD6E64D4 /* AnyCodable.swift */; };
-		8039ECB8C2544D5F4DD48D62F73E399E /* RNLURLBeaconCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DB88807D443562D4C0C4DB2B075B209 /* RNLURLBeaconCompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		831D83310862C4B3EA8ABFD2D84FABEE /* RNLBeacon+Distance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A7F91307AB528610667B209C2BCFED1 /* RNLBeacon+Distance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83A08259454464BDCE588600E376D23D /* BeaconRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB7E2F5796FF4EA9E674CE202B3B89C /* BeaconRegion.swift */; };
-		8426FD14E9E665B672CABF6ACFA50557 /* RNLBeaconTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E34146FCCE1EA905BAB961B4DDF34EA1 /* RNLBeaconTableViewController.m */; };
-		8F5B10D8E00AE42AB23C0ABEC6ED7C5F /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F1792B2E13B1B8522056A622693FB /* Permission.swift */; };
-		92C3F6DEB354B18403F0F7E3BCF5A3DF /* RNLBeaconParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AD1B06D94BFAD7DE2C17C6577508BBBA /* RNLBeaconParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C70D5D15B066C98C422600AF6BF32C5 /* beacons-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 553F66379D9E0453018BED29D37FA4DC /* beacons-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E6E1035F14FCB5CD5ECC331279D80AD /* BeaconsPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = FF86C9B480D44FE8C92E84203962ADDD /* BeaconsPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5AC838DC7A20E1617CA5056762D7474 /* RNLBeaconScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CE22609A50D20362ABF6382CFCC05D /* RNLBeaconScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A90269BB71A4E352571927E49F77D1A9 /* RNLSignalMeasurement.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5E1C4D950BE35887627D1783925A6D /* RNLSignalMeasurement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD55D34726FCB2ED0B219D35CD275831 /* Proximity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F73677B7099F4FA42EF4DF1DBEEB8F /* Proximity.swift */; };
-		AFB1EC48992BD3EFAC081A19A1DA3DE4 /* LocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E067CD302254B03DBC93DF14F75B9E /* LocationClient.swift */; };
-		BB44EA64F6B3CFB312FC31EC4A9C2D21 /* Pods-Runner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96BF45FBE2BC9AD7B2D7E56D01B5EE46 /* Pods-Runner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDD79E9CEAF8E90A7087D5502A1ABFE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EFBEC33114171902EBCEF7114DA18DB /* Foundation.framework */; };
-		C4B34B7852B62EEEA498A1C1170A2C14 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBCBD70A2A83BC560A4EE8DBD340FC /* Channel.swift */; };
-		C9907151A7FCECCC29BD708E77252A8A /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DE58F83E2FB04C1327CB40DBAFFEF7 /* LocationExtension.swift */; };
-		CEB0FCC9183CD82B60DD1D4F6701CEB0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F755222C43290E36C015D163F5AB17 /* CoreLocation.framework */; };
-		D8389E0159DA61C19A36460FDA91478B /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7500CF9833E243569A8B438970879966 /* LocationHelper.swift */; };
-		D990912B56356899CE735BD40B6ACC1C /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A0F73CEFB6213020A7DE670863BB3B /* DataRequest.swift */; };
-		E5B9C83EDFE69372B5E613C23CB999FB /* flutter_local_notifications-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E256C59E310E0DFC42749EAD7C4242B4 /* flutter_local_notifications-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDF33EF839F6B0B54CFC8CE6759F6857 /* RNLLocationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 40BAF1BFBD4E862ABBA1A83E9C609646 /* RNLLocationTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF27D23323EB2CE1009A02CF /* FlutterStreamsChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF27D23223EB2CE1009A02CF /* FlutterStreamsChannel.m */; };
-		F575E5933910FD36BE865E4814AD06F4 /* RNLBeaconTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AA75FB874C6BCBE3E1FFA3032F519EB /* RNLBeaconTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5F809A81C8DA7CECEC5565D77AF5FCD /* RNLBeaconScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F5B4CC384C3F8803D4A641A70E270E /* RNLBeaconScanner.m */; };
-		FD9E44667FA30AA7CE3A8518F78F9782 /* RNLBeaconTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = B769EAC385CB82FE4A6238996545C5C8 /* RNLBeaconTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFB61980071B351AD06D8043A3903DD3 /* FlutterLocalNotificationsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B661557A54CAC275B887EE0F3DA885C /* FlutterLocalNotificationsPlugin.m */; };
+		00297997854D83EA091B67A3C4F8B9B7 /* RNLBeaconTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB6FB1BCE6EAA4AF9C19701D2D8B88 /* RNLBeaconTableViewController.m */; };
+		0D04201873690B5C8AD2C80212FDAF50 /* Pods-Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C932BD54DBB963102A89E0F9E3948 /* Pods-Runner-dummy.m */; };
+		0DDCCA7BDFBED29122A0DD618DD6B6C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258C9F4C872E3DCF4952859496043CE7 /* Foundation.framework */; };
+		0F78AFCE2A273AFC739AAFCB3557FB83 /* RNLBeaconTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C8CA2BF54DB354109CB9123C114A2A /* RNLBeaconTracker.m */; };
+		0FB362946D8CEF6B1B970E6F3D77F9DD /* LocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6539215A64DAA46E6C9425BBB795E523 /* LocationClient.swift */; };
+		148D083F32C20E97CD7654AAF289A81C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258C9F4C872E3DCF4952859496043CE7 /* Foundation.framework */; };
+		1A44270C3127AA4AA455482995D5E433 /* StatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48262B5CE2C5460415D06EAC607FD2 /* StatusRequest.swift */; };
+		2D2F4A62B6FA36A610A974D5EA68FCF2 /* RNLSignalMeasurement.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD095DE5874048AE0518C111C5C9E05 /* RNLSignalMeasurement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E3B45A348F68EFCBFC4B213A46B5252 /* Pods-Runner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96BF45FBE2BC9AD7B2D7E56D01B5EE46 /* Pods-Runner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E75D980141C147FA1B016953AD2C6C2 /* omnys_beacons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C501016A6DF806F12055D05213ABDFE /* omnys_beacons-dummy.m */; };
+		2EC90FA0EFB5EAF0EBE33E5F276B4BA3 /* RNLBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 474810F90274B7627D8D5670B092C1C3 /* RNLBeacon.m */; };
+		2F0DBCEAF7FA9C4BB8874E1F216F7C8E /* RNLBeaconScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = D32E4B47BDE23CF2841D3BEBA508C2AA /* RNLBeaconScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		300FD494A48CB2CA7A00B1F357559233 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93EBFFAF55AAE5502A5CCFF03D6D89B /* CoreLocation.framework */; };
+		3138E8CDD64C48224EA60D968FB34DA3 /* MonitoringState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46118059E7231E324A72AB43CB27B02F /* MonitoringState.swift */; };
+		33849A707F2BF2F5338CD5BF958089D3 /* RNLURLBeaconCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BB091EC3946BA92CCB31D18FE4E9EF /* RNLURLBeaconCompressor.m */; };
+		3996418BEE1DD47D927B7BCC8E15E5EB /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A096D8320E9F72EF9A7408868B26EAA /* LocationHelper.swift */; };
+		4DF00BEC21B1796881A02AE392D3A6F1 /* RNLBeacon.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BD099C3CECD8611CAF101AA2A00AB1 /* RNLBeacon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5276E78B48D6C39347A9063D0BD53090 /* Codec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB442A17189BC5B3437F20F295F3F1F /* Codec.swift */; };
+		53CB1A772DF0EE042804950DD053E1DF /* SwiftOmnysBeaconsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DDEC33FD88CE29AA8E1C947686B94 /* SwiftOmnysBeaconsPlugin.swift */; };
+		57F0BF039A499A01A179B7570E1E088B /* RNLBeaconTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC83C7A57132BDE2EBB68ED780B1816 /* RNLBeaconTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AF07FA4057DD1C9492B5CBF3272A112 /* RNLLocationTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B228E21C82E327AA05E832E39F548F /* RNLLocationTracker.m */; };
+		5E7E2F861F4D866D183A4F4E7C258AF0 /* RNLBeaconScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 542FFF94DD428C5630127D1110372EA9 /* RNLBeaconScanner.m */; };
+		62A79768D0213F59D48ED35112A989BB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF548F527A4B24637D82250F918DFF29 /* Settings.swift */; };
+		652CDB303092EDCAE51486F795606D59 /* Proximity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BEE1EAA020E724F7FFEA9E4D7C0183 /* Proximity.swift */; };
+		6948F27A27152196198E624A46A2096E /* RNLURLBeaconCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 495065CEC706DA761CA703D50FE0E4DC /* RNLURLBeaconCompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AF780A745CBC7CA827A26BFBD7E5CF7 /* RNLBeaconParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 33591390BF8F70F333851884FD72E9A4 /* RNLBeaconParser.m */; };
+		743C94ABF7E5E108571FF274A9F765FE /* BackgroundMonitoringEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96699014AFED0711375BF0D8670F3CD9 /* BackgroundMonitoringEvent.swift */; };
+		74B3C4E5F45E826A75D87EAB89D2325E /* OmnysBeaconsPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = FB2D06501E11110606A25BEF9183BC10 /* OmnysBeaconsPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89190E1460829679A2113057D9F6F63A /* RNLBeaconTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4FC54E92988EBB746727C90A6E24A5 /* RNLBeaconTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AE4FD7E5225D9B6EAC227AB399B2CBA /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BC1345F851FCEF5E052CA72B2C4557 /* AnyCodable.swift */; };
+		8E5F648BFA178676A4D7D05895F0F3C2 /* omnys_beacons-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99903A42927916AEAF2D694B04182BC5 /* omnys_beacons-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94DC579FB49C3F57CA9116D27FFC3D44 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4952DAEA7AD24C50AC8007FA71D08B /* Beacon.swift */; };
+		962120FD615771430E5AF710C68D3037 /* RNLBeacon+Distance.h in Headers */ = {isa = PBXBuildFile; fileRef = 158ECDFAED933BC4A73F271BEF328BEF /* RNLBeacon+Distance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CF50EA872F7AE6C1BD3DB8BACCC3A28 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BADE838676D1ADC6B5F178D17290A /* LocationExtension.swift */; };
+		9D120978700ABD8CE7213B0C5E0104F4 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DF85569CE70F31CD06E61F349A731 /* Channel.swift */; };
+		AC6BFB65595CD35407BEE302FF4A1B0D /* RNLLocationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 90BEFDA6363C116179D6DFD9DFBAD5B3 /* RNLLocationTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDAC7D2AD547FDC3E204E39B2BE9953A /* FlutterStreamsChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4290DB9047B2F4A61723258A607259 /* FlutterStreamsChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C560A670B353EE06EACFC820C8A4213D /* RNLBeacon+Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E842115E1A14B6D98B933CBF4112DE /* RNLBeacon+Distance.m */; };
+		CA63151526A5EC03B1D6343837808061 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F591E53BA8DBF76DFED8A295490A5430 /* Result.swift */; };
+		D1A50D4F4A3D68B05729B1D1555B39CC /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989EA723C3A59E1D06757AD241732ADB /* Permission.swift */; };
+		D708B406D4766896B26C220B5120DC58 /* OmnysBeaconsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E59C0624AD0A7635EAD61A34E1E6DE /* OmnysBeaconsPlugin.m */; };
+		D7E9C4F9A76F0BC0D0C86BA9B944C7F3 /* RNLBeaconParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A75C8C2968BE5C080C498E963E9EB4B8 /* RNLBeaconParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFCB6E9EF8093E5D5A2BB9E7CAF28C81 /* RNLSignalMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4E4A0A6B1F9EB2F5A48EF499DF7D3 /* RNLSignalMeasurement.m */; };
+		E6089A51A6F11B317E998DF0AB102F3E /* BeaconRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06E994670982E11CCFA232421F3E94 /* BeaconRegion.swift */; };
+		F30069BA3DDDC078DC8D6463FEEC4D13 /* FlutterStreamsChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = B767218CEAEF7EC6C1642DF8D39BC26F /* FlutterStreamsChannel.m */; };
+		FF15DCBFDBE9171F0FF488EA2E75889A /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128F0DB866A92451177B31DEDC1E7DB3 /* DataRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05F8D88862D4EDD4DC5FD39EB94E544C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F64AA263B9D7877A7D58823DEF7F113B;
-			remoteInfo = flutter_local_notifications;
-		};
-		1374E38EB991DD03C96C0640B9AC727B /* PBXContainerItemProxy */ = {
+		5E9C37BD2B4A60276C0B666C4801BD94 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
 			remoteInfo = Flutter;
 		};
-		5339D4B2EDA2BAE1ADE8FBEEA9107057 /* PBXContainerItemProxy */ = {
+		9CB8F95B643F611F338AEC83CD1D2D83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
 			remoteInfo = Flutter;
 		};
-		ACF5669442A7367AB10289AF6DAB7547 /* PBXContainerItemProxy */ = {
+		C850D981E1825A0461B926E54765A806 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1EFDDC32A34D56D411E640A81DCD9E73;
-			remoteInfo = Flutter;
-		};
-		EA04CC410F89B0003EDD3B3DA2225811 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EEB41AE711CFE0270A8147036B994D09;
-			remoteInfo = beacons;
+			remoteGlobalIDString = E182794E36E77C7A62B228286895FFBE;
+			remoteInfo = omnys_beacons;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		026ABCB15F96AE4E12E3F5136A90859A /* RNLBeacon+Distance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RNLBeacon+Distance.m"; path = "../../../../../../../../ios/Classes/SnowM/RNLBeacon+Distance.m"; sourceTree = "<group>"; };
-		0B1229801E9E32E723C593A146B5A4EA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../../../../../../../../Development/flutter/bin/cache/artifacts/engine/ios/LICENSE; sourceTree = "<group>"; };
-		1A7F91307AB528610667B209C2BCFED1 /* RNLBeacon+Distance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RNLBeacon+Distance.h"; path = "../../../../../../../../ios/Classes/SnowM/RNLBeacon+Distance.h"; sourceTree = "<group>"; };
-		1D1FF1DB4A04BE41272CE5176B924390 /* RNLBeacon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeacon.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeacon.h; sourceTree = "<group>"; };
-		1D568399649E33DF9D900322BE1A6CF0 /* beacons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = beacons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		20E21DB45824B021B92C0C348247B2C7 /* NotificationDetails.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NotificationDetails.m; path = "../../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/ios/Classes/NotificationDetails.m"; sourceTree = "<group>"; };
-		22DE58F83E2FB04C1327CB40DBAFFEF7 /* LocationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationExtension.swift; path = ../../../../../../../../ios/Classes/Location/LocationExtension.swift; sourceTree = "<group>"; };
-		248E2F518C5004D59E673B39E438C34D /* flutter_local_notifications-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "flutter_local_notifications-Info.plist"; sourceTree = "<group>"; };
-		2B9F1792B2E13B1B8522056A622693FB /* Permission.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Permission.swift; path = ../../../../../../../../ios/Classes/Data/Permission.swift; sourceTree = "<group>"; };
+		11735FC29BCBFA37BE59D84E8948A05E /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		128F0DB866A92451177B31DEDC1E7DB3 /* DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRequest.swift; path = ../../../../../../../../ios/Classes/Channel/DataRequest.swift; sourceTree = "<group>"; };
+		158ECDFAED933BC4A73F271BEF328BEF /* RNLBeacon+Distance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RNLBeacon+Distance.h"; path = "../../../../../../../../ios/Classes/SnowM/RNLBeacon+Distance.h"; sourceTree = "<group>"; };
+		1A096D8320E9F72EF9A7408868B26EAA /* LocationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationHelper.swift; path = ../../../../../../../../ios/Classes/Location/LocationHelper.swift; sourceTree = "<group>"; };
+		1FBB6FB1BCE6EAA4AF9C19701D2D8B88 /* RNLBeaconTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeaconTableViewController.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconTableViewController.m; sourceTree = "<group>"; };
+		24E842115E1A14B6D98B933CBF4112DE /* RNLBeacon+Distance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RNLBeacon+Distance.m"; path = "../../../../../../../../ios/Classes/SnowM/RNLBeacon+Distance.m"; sourceTree = "<group>"; };
+		258C9F4C872E3DCF4952859496043CE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2C501016A6DF806F12055D05213ABDFE /* omnys_beacons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "omnys_beacons-dummy.m"; sourceTree = "<group>"; };
 		317C26B9A7CEDD34ADE8F37FAAB7AC20 /* Pods-Runner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Runner-frameworks.sh"; sourceTree = "<group>"; };
-		3341ECA23DBE529AEC599F161437FA1D /* Settings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../../../../../../../../ios/Classes/Data/Settings.swift; sourceTree = "<group>"; };
-		3DF6F697C3356EB3DAD07C7478EF5304 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../../../../../../LICENSE; sourceTree = "<group>"; };
-		3F8D6DCF9F34C035391495B13533C246 /* beacons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = beacons.xcconfig; sourceTree = "<group>"; };
-		400894E0E95F0858DB2575D7ADA88435 /* RNLBeacon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeacon.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeacon.m; sourceTree = "<group>"; };
-		40BAF1BFBD4E862ABBA1A83E9C609646 /* RNLLocationTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLLocationTracker.h; path = ../../../../../../../../ios/Classes/SnowM/RNLLocationTracker.h; sourceTree = "<group>"; };
-		46660BA830154B3FDBAECFF6CED3B3A5 /* beacons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "beacons-dummy.m"; sourceTree = "<group>"; };
-		46A287628778E07693879B5D66DD5B7A /* Flutter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.xcconfig; sourceTree = "<group>"; };
-		4B0C44AC4036DD0247B5BB8F8CBD93A5 /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Flutter.framework; path = ../../../../../../../../Development/flutter/bin/cache/artifacts/engine/ios/Flutter.framework; sourceTree = "<group>"; };
+		33591390BF8F70F333851884FD72E9A4 /* RNLBeaconParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeaconParser.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconParser.m; sourceTree = "<group>"; };
+		3791BE9A3127D3DC62FA5D0C8B459E48 /* omnys_beacons-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "omnys_beacons-Info.plist"; sourceTree = "<group>"; };
+		3A48262B5CE2C5460415D06EAC607FD2 /* StatusRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusRequest.swift; path = ../../../../../../../../ios/Classes/Channel/StatusRequest.swift; sourceTree = "<group>"; };
+		3B4FC54E92988EBB746727C90A6E24A5 /* RNLBeaconTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeaconTableViewController.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconTableViewController.h; sourceTree = "<group>"; };
+		46118059E7231E324A72AB43CB27B02F /* MonitoringState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonitoringState.swift; path = ../../../../../../../../ios/Classes/Data/MonitoringState.swift; sourceTree = "<group>"; };
+		474810F90274B7627D8D5670B092C1C3 /* RNLBeacon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeacon.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeacon.m; sourceTree = "<group>"; };
+		495065CEC706DA761CA703D50FE0E4DC /* RNLURLBeaconCompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLURLBeaconCompressor.h; path = ../../../../../../../../ios/Classes/SnowM/RNLURLBeaconCompressor.h; sourceTree = "<group>"; };
 		51825CD8F0558EFA53D9510F0E5BFA16 /* Pods-Runner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-Info.plist"; sourceTree = "<group>"; };
-		53D6B4297E4F4692D437B2B8549778BD /* flutter_local_notifications.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = flutter_local_notifications.xcconfig; sourceTree = "<group>"; };
-		53F5B4CC384C3F8803D4A641A70E270E /* RNLBeaconScanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeaconScanner.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconScanner.m; sourceTree = "<group>"; };
-		546453ABB2EBC1538F12B379910EA025 /* beacons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "beacons-prefix.pch"; sourceTree = "<group>"; };
-		553F66379D9E0453018BED29D37FA4DC /* beacons-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "beacons-umbrella.h"; sourceTree = "<group>"; };
-		56CBCBD70A2A83BC560A4EE8DBD340FC /* Channel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = ../../../../../../../../ios/Classes/Channel/Channel.swift; sourceTree = "<group>"; };
-		573569A395781B00F409B84EF740973A /* Codec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codec.swift; path = ../../../../../../../../ios/Classes/Channel/Codec.swift; sourceTree = "<group>"; };
-		5EFBEC33114171902EBCEF7114DA18DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5FB7E2F5796FF4EA9E674CE202B3B89C /* BeaconRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconRegion.swift; path = ../../../../../../../../ios/Classes/Data/BeaconRegion.swift; sourceTree = "<group>"; };
-		669E8F25E1897672BDB80B7EB784DA24 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AA75FB874C6BCBE3E1FFA3032F519EB /* RNLBeaconTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeaconTableViewController.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconTableViewController.h; sourceTree = "<group>"; };
-		72A9924F7F5C65CBCCEA6BF647ED66CC /* NotificationTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NotificationTime.h; path = "../../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/ios/Classes/NotificationTime.h"; sourceTree = "<group>"; };
-		7500CF9833E243569A8B438970879966 /* LocationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationHelper.swift; path = ../../../../../../../../ios/Classes/Location/LocationHelper.swift; sourceTree = "<group>"; };
-		79B0332D3A387FB4C01F37A7DACDCDCA /* BeaconsPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BeaconsPlugin.m; path = ../../../../../../../ios/Classes/BeaconsPlugin.m; sourceTree = "<group>"; };
+		51E59C0624AD0A7635EAD61A34E1E6DE /* OmnysBeaconsPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OmnysBeaconsPlugin.m; path = ../../../../../../../ios/Classes/OmnysBeaconsPlugin.m; sourceTree = "<group>"; };
+		542FFF94DD428C5630127D1110372EA9 /* RNLBeaconScanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeaconScanner.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconScanner.m; sourceTree = "<group>"; };
+		54BEE1EAA020E724F7FFEA9E4D7C0183 /* Proximity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Proximity.swift; path = ../../../../../../../../ios/Classes/Data/Proximity.swift; sourceTree = "<group>"; };
+		6539215A64DAA46E6C9425BBB795E523 /* LocationClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationClient.swift; path = ../../../../../../../../ios/Classes/Location/LocationClient.swift; sourceTree = "<group>"; };
+		65D3C6AA7DBE992AA21453CF7BC9B06A /* omnys_beacons.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = omnys_beacons.podspec; path = ../../../../../../ios/omnys_beacons.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Runner"; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C4952DAEA7AD24C50AC8007FA71D08B /* Beacon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Beacon.swift; path = ../../../../../../../../ios/Classes/Data/Beacon.swift; sourceTree = "<group>"; };
+		6CC83C7A57132BDE2EBB68ED780B1816 /* RNLBeaconTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeaconTracker.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconTracker.h; sourceTree = "<group>"; };
+		6EB442A17189BC5B3437F20F295F3F1F /* Codec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codec.swift; path = ../../../../../../../../ios/Classes/Channel/Codec.swift; sourceTree = "<group>"; };
 		7B3C932BD54DBB963102A89E0F9E3948 /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
-		7B661557A54CAC275B887EE0F3DA885C /* FlutterLocalNotificationsPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlutterLocalNotificationsPlugin.m; path = "../../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/ios/Classes/FlutterLocalNotificationsPlugin.m"; sourceTree = "<group>"; };
-		80661D2FA4D997927E7497CE9926F2E8 /* beacons.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = beacons.podspec; path = ../../../../../../ios/beacons.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		85E3F96143418A811F3596273CD2ABFE /* flutter_local_notifications-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "flutter_local_notifications-dummy.m"; sourceTree = "<group>"; };
-		86A0F73CEFB6213020A7DE670863BB3B /* DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRequest.swift; path = ../../../../../../../../ios/Classes/Channel/DataRequest.swift; sourceTree = "<group>"; };
-		8813CBE6BE90BC9481F3EF590BBA5669 /* RNLBeaconParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeaconParser.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconParser.m; sourceTree = "<group>"; };
-		8ADD530789331C9A64ADAC4DF24C2843 /* flutter_local_notifications-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "flutter_local_notifications-prefix.pch"; sourceTree = "<group>"; };
-		8C36657F9B46808B77860BB6448CE0FB /* beacons.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = beacons.modulemap; sourceTree = "<group>"; };
-		8CEA2D1C4519627E8F459210EBC294E5 /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Flutter.podspec; path = ../../../../../../../../Development/flutter/bin/cache/artifacts/engine/ios/Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		8F10B978BD92332F3D4A8DF054C26388 /* NotificationTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NotificationTime.m; path = "../../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/ios/Classes/NotificationTime.m"; sourceTree = "<group>"; };
+		802DF85569CE70F31CD06E61F349A731 /* Channel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = ../../../../../../../../ios/Classes/Channel/Channel.swift; sourceTree = "<group>"; };
+		84BD099C3CECD8611CAF101AA2A00AB1 /* RNLBeacon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeacon.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeacon.h; sourceTree = "<group>"; };
+		90BEFDA6363C116179D6DFD9DFBAD5B3 /* RNLLocationTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLLocationTracker.h; path = ../../../../../../../../ios/Classes/SnowM/RNLLocationTracker.h; sourceTree = "<group>"; };
+		9153E8D5E9E67BB01E09D13FADAA978F /* Flutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.debug.xcconfig; sourceTree = "<group>"; };
+		96699014AFED0711375BF0D8670F3CD9 /* BackgroundMonitoringEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundMonitoringEvent.swift; path = ../../../../../../../../ios/Classes/Data/BackgroundMonitoringEvent.swift; sourceTree = "<group>"; };
 		96BF45FBE2BC9AD7B2D7E56D01B5EE46 /* Pods-Runner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Runner-umbrella.h"; sourceTree = "<group>"; };
-		96DC4F89280AB856E4B8B2B4981843C6 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../../../../../../../../ios/Classes/Data/Result.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DB88807D443562D4C0C4DB2B075B209 /* RNLURLBeaconCompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLURLBeaconCompressor.h; path = ../../../../../../../../ios/Classes/SnowM/RNLURLBeaconCompressor.h; sourceTree = "<group>"; };
+		989EA723C3A59E1D06757AD241732ADB /* Permission.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Permission.swift; path = ../../../../../../../../ios/Classes/Data/Permission.swift; sourceTree = "<group>"; };
+		9927BCF75684518F0F0B647C5E66D67D /* omnys_beacons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = omnys_beacons.debug.xcconfig; sourceTree = "<group>"; };
+		99903A42927916AEAF2D694B04182BC5 /* omnys_beacons-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "omnys_beacons-umbrella.h"; sourceTree = "<group>"; };
+		9C4290DB9047B2F4A61723258A607259 /* FlutterStreamsChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlutterStreamsChannel.h; path = ../../../../../../../../ios/Classes/StreamChannel/FlutterStreamsChannel.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F79F8269DC34AC56BB3D1D9652C0D86 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
-		A55E359824B44A402715D1E004C11A48 /* StatusRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusRequest.swift; path = ../../../../../../../../ios/Classes/Channel/StatusRequest.swift; sourceTree = "<group>"; };
-		AD1B06D94BFAD7DE2C17C6577508BBBA /* RNLBeaconParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeaconParser.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconParser.h; sourceTree = "<group>"; };
-		ADC218760CC9ADEBFDD9044EA381BB15 /* NotificationDetails.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NotificationDetails.h; path = "../../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/ios/Classes/NotificationDetails.h"; sourceTree = "<group>"; };
-		B2F73677B7099F4FA42EF4DF1DBEEB8F /* Proximity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Proximity.swift; path = ../../../../../../../../ios/Classes/Data/Proximity.swift; sourceTree = "<group>"; };
-		B769EAC385CB82FE4A6238996545C5C8 /* RNLBeaconTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeaconTracker.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconTracker.h; sourceTree = "<group>"; };
-		C4DFFEC48B76426A4B4301ACFD6E64D4 /* AnyCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyCodable.swift; path = ../../../../../../../../ios/Classes/Channel/AnyCodable.swift; sourceTree = "<group>"; };
-		C6978A16AD402B410231EA6DB8732ADB /* RNLLocationTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLLocationTracker.m; path = ../../../../../../../../ios/Classes/SnowM/RNLLocationTracker.m; sourceTree = "<group>"; };
-		C6CE22609A50D20362ABF6382CFCC05D /* RNLBeaconScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeaconScanner.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconScanner.h; sourceTree = "<group>"; };
+		A2B228E21C82E327AA05E832E39F548F /* RNLLocationTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLLocationTracker.m; path = ../../../../../../../../ios/Classes/SnowM/RNLLocationTracker.m; sourceTree = "<group>"; };
+		A3BF3AA7FAED066FFE5E79467DEF48FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../../../../../../LICENSE; sourceTree = "<group>"; };
+		A75C8C2968BE5C080C498E963E9EB4B8 /* RNLBeaconParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeaconParser.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconParser.h; sourceTree = "<group>"; };
+		A95F7BD57FAE1299E53E98E62E2A8F0D /* omnys_beacons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = omnys_beacons.release.xcconfig; sourceTree = "<group>"; };
+		B767218CEAEF7EC6C1642DF8D39BC26F /* FlutterStreamsChannel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlutterStreamsChannel.m; path = ../../../../../../../../ios/Classes/StreamChannel/FlutterStreamsChannel.m; sourceTree = "<group>"; };
+		C41D0375EDEE258EA0142ADCD5E9FC08 /* Flutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.release.xcconfig; sourceTree = "<group>"; };
 		C6EA98402A94995D022D330B64B5203D /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C74CB1F7C3D2DC75B1BD0C332AD79D83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = "../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/LICENSE"; sourceTree = "<group>"; };
-		CB167A52EF4C533B06A4713D298EE56D /* FlutterLocalNotificationsPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlutterLocalNotificationsPlugin.h; path = "../../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/ios/Classes/FlutterLocalNotificationsPlugin.h"; sourceTree = "<group>"; };
-		CCD645B4D0C79FA421D1DFB6E62C6295 /* RNLSignalMeasurement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLSignalMeasurement.m; path = ../../../../../../../../ios/Classes/SnowM/RNLSignalMeasurement.m; sourceTree = "<group>"; };
+		C721B8DB546AF999E4988587335623C1 /* omnys_beacons.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = omnys_beacons.modulemap; sourceTree = "<group>"; };
+		CAD095DE5874048AE0518C111C5C9E05 /* RNLSignalMeasurement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLSignalMeasurement.h; path = ../../../../../../../../ios/Classes/SnowM/RNLSignalMeasurement.h; sourceTree = "<group>"; };
+		CD06E994670982E11CCFA232421F3E94 /* BeaconRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconRegion.swift; path = ../../../../../../../../ios/Classes/Data/BeaconRegion.swift; sourceTree = "<group>"; };
 		CDAECCF4B5E08124ED410F09FD5A5DF9 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
-		CEC46E5013A63ECFC050BDF5CECB16D2 /* SwiftBeaconsPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBeaconsPlugin.swift; path = ../../../../../../../ios/Classes/SwiftBeaconsPlugin.swift; sourceTree = "<group>"; };
-		D2818DB76C14B8736924E987E37A9823 /* flutter_local_notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = flutter_local_notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF548F527A4B24637D82250F918DFF29 /* Settings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../../../../../../../../ios/Classes/Data/Settings.swift; sourceTree = "<group>"; };
 		D2FA70CA298C392CB8332ADEEDD1CE85 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
-		D967EAA382779963B3A5ACBA1C16ADEF /* MonitoringState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonitoringState.swift; path = ../../../../../../../../ios/Classes/Data/MonitoringState.swift; sourceTree = "<group>"; };
+		D32E4B47BDE23CF2841D3BEBA508C2AA /* RNLBeaconScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLBeaconScanner.h; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconScanner.h; sourceTree = "<group>"; };
+		D4BC1345F851FCEF5E052CA72B2C4557 /* AnyCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyCodable.swift; path = ../../../../../../../../ios/Classes/Channel/AnyCodable.swift; sourceTree = "<group>"; };
+		D5C8CA2BF54DB354109CB9123C114A2A /* RNLBeaconTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeaconTracker.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconTracker.m; sourceTree = "<group>"; };
+		D6070B14A07F0BC81FC8896D85B36138 /* omnys_beacons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "omnys_beacons-prefix.pch"; sourceTree = "<group>"; };
+		D93EBFFAF55AAE5502A5CCFF03D6D89B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		D9F2B4CB813B4BDC4D164C6E0868930A /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
-		DF00A866BA3D2FF585DA7B6D9EB2667F /* flutter_local_notifications.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = flutter_local_notifications.podspec; path = "../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/ios/flutter_local_notifications.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E0E067CD302254B03DBC93DF14F75B9E /* LocationClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationClient.swift; path = ../../../../../../../../ios/Classes/Location/LocationClient.swift; sourceTree = "<group>"; };
-		E256C59E310E0DFC42749EAD7C4242B4 /* flutter_local_notifications-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "flutter_local_notifications-umbrella.h"; sourceTree = "<group>"; };
-		E296AFF8812361BFB03F2705A10F287A /* flutter_local_notifications.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = flutter_local_notifications.modulemap; sourceTree = "<group>"; };
-		E34146FCCE1EA905BAB961B4DDF34EA1 /* RNLBeaconTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeaconTableViewController.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconTableViewController.m; sourceTree = "<group>"; };
-		E46FF9076ED31FF27365212C7E45BBB5 /* beacons-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "beacons-Info.plist"; sourceTree = "<group>"; };
-		E4AF50B07F069917865A6C56AFB5D40B /* Beacon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Beacon.swift; path = ../../../../../../../../ios/Classes/Data/Beacon.swift; sourceTree = "<group>"; };
-		E5CA65284F7657FC341524D614A2C2A4 /* BackgroundMonitoringEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundMonitoringEvent.swift; path = ../../../../../../../../ios/Classes/Data/BackgroundMonitoringEvent.swift; sourceTree = "<group>"; };
-		E9F755222C43290E36C015D163F5AB17 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		EE5E1C4D950BE35887627D1783925A6D /* RNLSignalMeasurement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNLSignalMeasurement.h; path = ../../../../../../../../ios/Classes/SnowM/RNLSignalMeasurement.h; sourceTree = "<group>"; };
-		EF27D23223EB2CE1009A02CF /* FlutterStreamsChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FlutterStreamsChannel.m; path = ../../../../../../../../ios/Classes/StreamChannel/FlutterStreamsChannel.m; sourceTree = "<group>"; };
-		EF27D23423EB2D0E009A02CF /* FlutterStreamsChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlutterStreamsChannel.h; path = ../../../../../../../../ios/Classes/StreamChannel/FlutterStreamsChannel.h; sourceTree = "<group>"; };
-		F1EAD0805F0DEBC379D80D494DEFDC4E /* RNLURLBeaconCompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLURLBeaconCompressor.m; path = ../../../../../../../../ios/Classes/SnowM/RNLURLBeaconCompressor.m; sourceTree = "<group>"; };
+		DB5DDEC33FD88CE29AA8E1C947686B94 /* SwiftOmnysBeaconsPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftOmnysBeaconsPlugin.swift; path = ../../../../../../../ios/Classes/SwiftOmnysBeaconsPlugin.swift; sourceTree = "<group>"; };
+		E1E4E4A0A6B1F9EB2F5A48EF499DF7D3 /* RNLSignalMeasurement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLSignalMeasurement.m; path = ../../../../../../../../ios/Classes/SnowM/RNLSignalMeasurement.m; sourceTree = "<group>"; };
+		EC4BADE838676D1ADC6B5F178D17290A /* LocationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationExtension.swift; path = ../../../../../../../../ios/Classes/Location/LocationExtension.swift; sourceTree = "<group>"; };
+		F07CF491D0309BD7DBB42F880E28071F /* omnys_beacons */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = omnys_beacons; path = omnys_beacons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49C32B3B8CF59AB437BFD7314674868 /* Pods-Runner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Runner.modulemap"; sourceTree = "<group>"; };
-		F6FF23F9A5B1CAA35A43EB0E3F925979 /* RNLBeaconTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLBeaconTracker.m; path = ../../../../../../../../ios/Classes/SnowM/RNLBeaconTracker.m; sourceTree = "<group>"; };
-		FF86C9B480D44FE8C92E84203962ADDD /* BeaconsPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BeaconsPlugin.h; path = ../../../../../../../ios/Classes/BeaconsPlugin.h; sourceTree = "<group>"; };
+		F591E53BA8DBF76DFED8A295490A5430 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../../../../../../../../ios/Classes/Data/Result.swift; sourceTree = "<group>"; };
+		F8BB091EC3946BA92CCB31D18FE4E9EF /* RNLURLBeaconCompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNLURLBeaconCompressor.m; path = ../../../../../../../../ios/Classes/SnowM/RNLURLBeaconCompressor.m; sourceTree = "<group>"; };
+		FB2D06501E11110606A25BEF9183BC10 /* OmnysBeaconsPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OmnysBeaconsPlugin.h; path = ../../../../../../../ios/Classes/OmnysBeaconsPlugin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E65331593A85D2B51454D3A08480605 /* Frameworks */ = {
+		236DCB112539099B40DB0BD15842C406 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD79E9CEAF8E90A7087D5502A1ABFE8 /* Foundation.framework in Frameworks */,
+				148D083F32C20E97CD7654AAF289A81C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4B3EB8792AF22760A83079B2C7E3819 /* Frameworks */ = {
+		4774E93755862F3415163521DE903F21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43FCFE6E93CB429290DDB93E499FD935 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE056425650FB6904A8947DE417827F6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEB0FCC9183CD82B60DD1D4F6701CEB0 /* CoreLocation.framework in Frameworks */,
-				2A10F3BAD808B57D10EA4D04BBCF3836 /* Foundation.framework in Frameworks */,
+				300FD494A48CB2CA7A00B1F357559233 /* CoreLocation.framework in Frameworks */,
+				0DDCCA7BDFBED29122A0DD618DD6B6C0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04A3347AF743E729F7DD24E22C1AB032 /* Development Pods */ = {
+		0404D05EAC359120921E361ABCA55444 /* example */ = {
 			isa = PBXGroup;
 			children = (
-				0A4427D02623C3C50AB332213DB1C198 /* beacons */,
-				D0DAB815E4474A8A744701CD455350E9 /* Flutter */,
-				08258705342C15133DD8E02FAE504ACC /* flutter_local_notifications */,
+				353F75FB4F533B7AB4BDBB59175C8EA6 /* ios */,
 			);
-			name = "Development Pods";
+			name = example;
+			path = example;
 			sourceTree = "<group>";
 		};
-		08258705342C15133DD8E02FAE504ACC /* flutter_local_notifications */ = {
+		0E695FD4E1A2BA8A285DDA69EFB76E57 /* Channel */ = {
 			isa = PBXGroup;
 			children = (
-				CDDDFE2DD6581660371FA36E3B09E0F4 /* .. */,
-				E22BEFB8459471FE37A06E7D199EDF4B /* Pod */,
-				FFAB7C4A6A9311175398E233E9A0819B /* Support Files */,
+				D4BC1345F851FCEF5E052CA72B2C4557 /* AnyCodable.swift */,
+				802DF85569CE70F31CD06E61F349A731 /* Channel.swift */,
+				6EB442A17189BC5B3437F20F295F3F1F /* Codec.swift */,
+				128F0DB866A92451177B31DEDC1E7DB3 /* DataRequest.swift */,
+				3A48262B5CE2C5460415D06EAC607FD2 /* StatusRequest.swift */,
 			);
-			name = flutter_local_notifications;
-			path = ../.symlinks/plugins/flutter_local_notifications/ios;
-			sourceTree = "<group>";
-		};
-		0A4427D02623C3C50AB332213DB1C198 /* beacons */ = {
-			isa = PBXGroup;
-			children = (
-				5C975F744BA8DAC108E0D3136012E849 /* .. */,
-				DC1CE22580DF5CB033C9E0F216601703 /* Pod */,
-				5034850035B006247BC009D9DE4F583B /* Support Files */,
-			);
-			name = beacons;
-			path = ../.symlinks/plugins/beacons/ios;
-			sourceTree = "<group>";
-		};
-		1495587FE4E7C38B61EEE7CD404E68FE /* Personal */ = {
-			isa = PBXGroup;
-			children = (
-				2B739190A66F3503927146A7F2A3A463 /* beacons */,
-			);
-			path = Personal;
+			name = Channel;
+			path = Channel;
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA6AD96ECA3CCBA38373F6D0E76791BE /* iOS */,
+				2BAFBDB83E3D6316966EB82364FA2F7B /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		26EC46962A7BAB771A7132986C225C79 /* SnowM */ = {
+		22B00AEE9F97782D2E65C5A47B1B43AE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D1FF1DB4A04BE41272CE5176B924390 /* RNLBeacon.h */,
-				400894E0E95F0858DB2575D7ADA88435 /* RNLBeacon.m */,
-				1A7F91307AB528610667B209C2BCFED1 /* RNLBeacon+Distance.h */,
-				026ABCB15F96AE4E12E3F5136A90859A /* RNLBeacon+Distance.m */,
-				AD1B06D94BFAD7DE2C17C6577508BBBA /* RNLBeaconParser.h */,
-				8813CBE6BE90BC9481F3EF590BBA5669 /* RNLBeaconParser.m */,
-				C6CE22609A50D20362ABF6382CFCC05D /* RNLBeaconScanner.h */,
-				53F5B4CC384C3F8803D4A641A70E270E /* RNLBeaconScanner.m */,
-				6AA75FB874C6BCBE3E1FFA3032F519EB /* RNLBeaconTableViewController.h */,
-				E34146FCCE1EA905BAB961B4DDF34EA1 /* RNLBeaconTableViewController.m */,
-				B769EAC385CB82FE4A6238996545C5C8 /* RNLBeaconTracker.h */,
-				F6FF23F9A5B1CAA35A43EB0E3F925979 /* RNLBeaconTracker.m */,
-				40BAF1BFBD4E862ABBA1A83E9C609646 /* RNLLocationTracker.h */,
-				C6978A16AD402B410231EA6DB8732ADB /* RNLLocationTracker.m */,
-				EE5E1C4D950BE35887627D1783925A6D /* RNLSignalMeasurement.h */,
-				CCD645B4D0C79FA421D1DFB6E62C6295 /* RNLSignalMeasurement.m */,
-				9DB88807D443562D4C0C4DB2B075B209 /* RNLURLBeaconCompressor.h */,
-				F1EAD0805F0DEBC379D80D494DEFDC4E /* RNLURLBeaconCompressor.m */,
-			);
-			path = SnowM;
-			sourceTree = "<group>";
-		};
-		2A7E9281B704EEC22C51B42599B1A52C /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				C3414661B36C67DD669079C368E82A0F /* .. */,
-			);
-			path = ..;
-			sourceTree = "<group>";
-		};
-		2B31EF893D7324FEEC434770AFF27777 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				E0E067CD302254B03DBC93DF14F75B9E /* LocationClient.swift */,
-				22DE58F83E2FB04C1327CB40DBAFFEF7 /* LocationExtension.swift */,
-				7500CF9833E243569A8B438970879966 /* LocationHelper.swift */,
-			);
-			path = Location;
-			sourceTree = "<group>";
-		};
-		2B739190A66F3503927146A7F2A3A463 /* beacons */ = {
-			isa = PBXGroup;
-			children = (
-				C936B8C39693E32255526B1968C9F625 /* example */,
-			);
-			path = beacons;
-			sourceTree = "<group>";
-		};
-		310AE1EA353DCB2D6A5C2F276510FA73 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				78562F223B157C701FCDA99C32F43B2D /* ios */,
-			);
-			path = example;
-			sourceTree = "<group>";
-		};
-		3FA29ED2DA47AD0D5D378107EB1D153B /* plugins */ = {
-			isa = PBXGroup;
-			children = (
-				8BA92C32509479E007A48A2132D0D0E6 /* flutter_local_notifications */,
-			);
-			path = plugins;
-			sourceTree = "<group>";
-		};
-		48142ABD59B037874F7191BD53394B04 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				310AE1EA353DCB2D6A5C2F276510FA73 /* example */,
-			);
-			path = ..;
-			sourceTree = "<group>";
-		};
-		5034850035B006247BC009D9DE4F583B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8C36657F9B46808B77860BB6448CE0FB /* beacons.modulemap */,
-				3F8D6DCF9F34C035391495B13533C246 /* beacons.xcconfig */,
-				46660BA830154B3FDBAECFF6CED3B3A5 /* beacons-dummy.m */,
-				E46FF9076ED31FF27365212C7E45BBB5 /* beacons-Info.plist */,
-				546453ABB2EBC1538F12B379910EA025 /* beacons-prefix.pch */,
-				553F66379D9E0453018BED29D37FA4DC /* beacons-umbrella.h */,
+				C721B8DB546AF999E4988587335623C1 /* omnys_beacons.modulemap */,
+				2C501016A6DF806F12055D05213ABDFE /* omnys_beacons-dummy.m */,
+				3791BE9A3127D3DC62FA5D0C8B459E48 /* omnys_beacons-Info.plist */,
+				D6070B14A07F0BC81FC8896D85B36138 /* omnys_beacons-prefix.pch */,
+				99903A42927916AEAF2D694B04182BC5 /* omnys_beacons-umbrella.h */,
+				9927BCF75684518F0F0B647C5E66D67D /* omnys_beacons.debug.xcconfig */,
+				A95F7BD57FAE1299E53E98E62E2A8F0D /* omnys_beacons.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../../../../Pods/Target Support Files/beacons";
+			path = "../../../../Pods/Target Support Files/omnys_beacons";
 			sourceTree = "<group>";
 		};
-		5C6001B3F61DDF5D3393AE3BBCE09553 /* .symlinks */ = {
+		2A280E434751038908E79445978A4CB7 /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				9D386E7854A9AB28A450319A1EC62F3E /* plugins */,
-			);
-			path = .symlinks;
-			sourceTree = "<group>";
-		};
-		5C975F744BA8DAC108E0D3136012E849 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				48142ABD59B037874F7191BD53394B04 /* .. */,
+				2E8CB1F491624835A320E08EA9C1729F /* .. */,
 			);
 			name = ..;
 			path = ../../../../../../ios;
 			sourceTree = "<group>";
 		};
-		5EAF5184E8730C5ECC6F875221990E86 /* Pod */ = {
+		2BAFBDB83E3D6316966EB82364FA2F7B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8CEA2D1C4519627E8F459210EBC294E5 /* Flutter.podspec */,
-				0B1229801E9E32E723C593A146B5A4EA /* LICENSE */,
+				D93EBFFAF55AAE5502A5CCFF03D6D89B /* CoreLocation.framework */,
+				258C9F4C872E3DCF4952859496043CE7 /* Foundation.framework */,
 			);
-			name = Pod;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		62D1082B28A0D11CFF915234E96BDA5E /* Support Files */ = {
+		2DCCED805CAAF7FAF7C2BFF497E9115D /* .symlinks */ = {
 			isa = PBXGroup;
 			children = (
-				46A287628778E07693879B5D66DD5B7A /* Flutter.xcconfig */,
+				8C364C8AFF1CE045A5F806B14B42BAEB /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
+		2E8CB1F491624835A320E08EA9C1729F /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				0404D05EAC359120921E361ABCA55444 /* example */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		353F75FB4F533B7AB4BDBB59175C8EA6 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				2DCCED805CAAF7FAF7C2BFF497E9115D /* .symlinks */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		3B62CAEA27296388E59842CE3914484C /* StreamChannel */ = {
+			isa = PBXGroup;
+			children = (
+				9C4290DB9047B2F4A61723258A607259 /* FlutterStreamsChannel.h */,
+				B767218CEAEF7EC6C1642DF8D39BC26F /* FlutterStreamsChannel.m */,
+			);
+			name = StreamChannel;
+			path = StreamChannel;
+			sourceTree = "<group>";
+		};
+		3B83C99D90B40658FA0F25EFCB6DA484 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				96699014AFED0711375BF0D8670F3CD9 /* BackgroundMonitoringEvent.swift */,
+				6C4952DAEA7AD24C50AC8007FA71D08B /* Beacon.swift */,
+				CD06E994670982E11CCFA232421F3E94 /* BeaconRegion.swift */,
+				46118059E7231E324A72AB43CB27B02F /* MonitoringState.swift */,
+				989EA723C3A59E1D06757AD241732ADB /* Permission.swift */,
+				54BEE1EAA020E724F7FFEA9E4D7C0183 /* Proximity.swift */,
+				F591E53BA8DBF76DFED8A295490A5430 /* Result.swift */,
+				CF548F527A4B24637D82250F918DFF29 /* Settings.swift */,
+			);
+			name = Data;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4660E06C0782A1E5CDC111567E04E4DA /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				6539215A64DAA46E6C9425BBB795E523 /* LocationClient.swift */,
+				EC4BADE838676D1ADC6B5F178D17290A /* LocationExtension.swift */,
+				1A096D8320E9F72EF9A7408868B26EAA /* LocationHelper.swift */,
+			);
+			name = Location;
+			path = Location;
+			sourceTree = "<group>";
+		};
+		6DE5EC58B37FC581872529C867D385DD /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				F3A1FD166B60A6FAD17057C6123A747C /* Pod */,
+				7189B3608706C170607C45C83F243FBB /* Support Files */,
+			);
+			name = Flutter;
+			path = ../Flutter;
+			sourceTree = "<group>";
+		};
+		7189B3608706C170607C45C83F243FBB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9153E8D5E9E67BB01E09D13FADAA978F /* Flutter.debug.xcconfig */,
+				C41D0375EDEE258EA0142ADCD5E9FC08 /* Flutter.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../../../Pods/Target Support Files/Flutter";
-			sourceTree = "<group>";
-		};
-		65F2DCE9F3E2FAF1DB7B052020608727 /* beacons */ = {
-			isa = PBXGroup;
-			children = (
-				AE5C1980FD9CA3C63959B2C4F5882333 /* ios */,
-			);
-			path = beacons;
-			sourceTree = "<group>";
-		};
-		78562F223B157C701FCDA99C32F43B2D /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				5C6001B3F61DDF5D3393AE3BBCE09553 /* .symlinks */,
-			);
-			path = ios;
+			path = "../Pods/Target Support Files/Flutter";
 			sourceTree = "<group>";
 		};
 		791C6E4B424AF06279F8918FA67B8ED6 /* Targets Support Files */ = {
@@ -441,309 +354,159 @@
 			path = "Target Support Files/Pods-Runner";
 			sourceTree = "<group>";
 		};
-		7DFCF82313B5EC0C564D220E29E12ED0 /* Classes */ = {
+		8324535E822C8C423D6AA5FEC3940164 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EF27D23123EB2CB1009A02CF /* StreamChannel */,
-				FF86C9B480D44FE8C92E84203962ADDD /* BeaconsPlugin.h */,
-				79B0332D3A387FB4C01F37A7DACDCDCA /* BeaconsPlugin.m */,
-				CEC46E5013A63ECFC050BDF5CECB16D2 /* SwiftBeaconsPlugin.swift */,
-				C9652B2A1B18DBD156BE39A2E4390D5A /* Channel */,
-				A70E697E3FC089936E4BFF04DA7A90EA /* Data */,
-				2B31EF893D7324FEEC434770AFF27777 /* Location */,
-				26EC46962A7BAB771A7132986C225C79 /* SnowM */,
+				6DE5EC58B37FC581872529C867D385DD /* Flutter */,
+				B43AD84A0142DD0C53EB88098107122F /* omnys_beacons */,
 			);
-			path = Classes;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		8726511699F9F2D3B6A3047643719EBC /* Projects */ = {
+		8A0DDEB3F9C6EF5B4E5BF13C94CFB69C /* omnys_beacons */ = {
 			isa = PBXGroup;
 			children = (
-				1495587FE4E7C38B61EEE7CD404E68FE /* Personal */,
+				949769C6C7028AE6DE164BEA84E6504F /* ios */,
 			);
-			path = Projects;
+			name = omnys_beacons;
+			path = omnys_beacons;
 			sourceTree = "<group>";
 		};
-		8BA92C32509479E007A48A2132D0D0E6 /* flutter_local_notifications */ = {
+		8C364C8AFF1CE045A5F806B14B42BAEB /* plugins */ = {
 			isa = PBXGroup;
 			children = (
-				BA113BD33B54EAC9E69664DCE4BFBBA3 /* ios */,
+				8A0DDEB3F9C6EF5B4E5BF13C94CFB69C /* omnys_beacons */,
 			);
-			path = flutter_local_notifications;
-			sourceTree = "<group>";
-		};
-		9D386E7854A9AB28A450319A1EC62F3E /* plugins */ = {
-			isa = PBXGroup;
-			children = (
-				65F2DCE9F3E2FAF1DB7B052020608727 /* beacons */,
-			);
+			name = plugins;
 			path = plugins;
 			sourceTree = "<group>";
 		};
-		9FFF14937D985D7041BFBDC3729EF1D7 /* .. */ = {
+		949769C6C7028AE6DE164BEA84E6504F /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				FE6DD989CC774080BE525D98D5D9E5F7 /* .. */,
+				9B6510D121108AEF65112CABDF30E5C2 /* Classes */,
 			);
-			path = ..;
-			sourceTree = "<group>";
-		};
-		A70E697E3FC089936E4BFF04DA7A90EA /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				E5CA65284F7657FC341524D614A2C2A4 /* BackgroundMonitoringEvent.swift */,
-				E4AF50B07F069917865A6C56AFB5D40B /* Beacon.swift */,
-				5FB7E2F5796FF4EA9E674CE202B3B89C /* BeaconRegion.swift */,
-				D967EAA382779963B3A5ACBA1C16ADEF /* MonitoringState.swift */,
-				2B9F1792B2E13B1B8522056A622693FB /* Permission.swift */,
-				B2F73677B7099F4FA42EF4DF1DBEEB8F /* Proximity.swift */,
-				96DC4F89280AB856E4B8B2B4981843C6 /* Result.swift */,
-				3341ECA23DBE529AEC599F161437FA1D /* Settings.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		AE5C1980FD9CA3C63959B2C4F5882333 /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				7DFCF82313B5EC0C564D220E29E12ED0 /* Classes */,
-			);
+			name = ios;
 			path = ios;
 			sourceTree = "<group>";
 		};
-		B36583AA02D1B799C4FFCBE987C957FC /* Classes */ = {
+		96E095590F8921882E1A763B80EFF4DA /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				CB167A52EF4C533B06A4713D298EE56D /* FlutterLocalNotificationsPlugin.h */,
-				7B661557A54CAC275B887EE0F3DA885C /* FlutterLocalNotificationsPlugin.m */,
-				ADC218760CC9ADEBFDD9044EA381BB15 /* NotificationDetails.h */,
-				20E21DB45824B021B92C0C348247B2C7 /* NotificationDetails.m */,
-				72A9924F7F5C65CBCCEA6BF647ED66CC /* NotificationTime.h */,
-				8F10B978BD92332F3D4A8DF054C26388 /* NotificationTime.m */,
+				A3BF3AA7FAED066FFE5E79467DEF48FF /* LICENSE */,
+				65D3C6AA7DBE992AA21453CF7BC9B06A /* omnys_beacons.podspec */,
 			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9B6510D121108AEF65112CABDF30E5C2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FB2D06501E11110606A25BEF9183BC10 /* OmnysBeaconsPlugin.h */,
+				51E59C0624AD0A7635EAD61A34E1E6DE /* OmnysBeaconsPlugin.m */,
+				DB5DDEC33FD88CE29AA8E1C947686B94 /* SwiftOmnysBeaconsPlugin.swift */,
+				0E695FD4E1A2BA8A285DDA69EFB76E57 /* Channel */,
+				3B83C99D90B40658FA0F25EFCB6DA484 /* Data */,
+				4660E06C0782A1E5CDC111567E04E4DA /* Location */,
+				EBD5EA902B3ECC39CAEE5E043BF4C469 /* SnowM */,
+				3B62CAEA27296388E59842CE3914484C /* StreamChannel */,
+			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		B3C16D65C6B0041FABC2AB0D1772A0EC /* Products */ = {
+		B43AD84A0142DD0C53EB88098107122F /* omnys_beacons */ = {
 			isa = PBXGroup;
 			children = (
-				1D568399649E33DF9D900322BE1A6CF0 /* beacons.framework */,
-				D2818DB76C14B8736924E987E37A9823 /* flutter_local_notifications.framework */,
-				669E8F25E1897672BDB80B7EB784DA24 /* Pods_Runner.framework */,
+				2A280E434751038908E79445978A4CB7 /* .. */,
+				96E095590F8921882E1A763B80EFF4DA /* Pod */,
+				22B00AEE9F97782D2E65C5A47B1B43AE /* Support Files */,
+			);
+			name = omnys_beacons;
+			path = ../.symlinks/plugins/omnys_beacons/ios;
+			sourceTree = "<group>";
+		};
+		B66261D3AD71CD797E2AF65F3985D6B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F07CF491D0309BD7DBB42F880E28071F /* omnys_beacons */,
+				669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BA113BD33B54EAC9E69664DCE4BFBBA3 /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				B36583AA02D1B799C4FFCBE987C957FC /* Classes */,
-			);
-			path = ios;
-			sourceTree = "<group>";
-		};
-		BA6AD96ECA3CCBA38373F6D0E76791BE /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				E9F755222C43290E36C015D163F5AB17 /* CoreLocation.framework */,
-				5EFBEC33114171902EBCEF7114DA18DB /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		BCDAC6511E083AA653BD6C80B91088AE /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				E67D21F65A52BC1E7C81993E1ADB2004 /* .. */,
-			);
-			path = ..;
-			sourceTree = "<group>";
-		};
-		C3414661B36C67DD669079C368E82A0F /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				8726511699F9F2D3B6A3047643719EBC /* Projects */,
-			);
-			path = ..;
-			sourceTree = "<group>";
-		};
-		C936B8C39693E32255526B1968C9F625 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				EADA7EA6DA213194884475E4CB70F9E3 /* ios */,
-			);
-			path = example;
-			sourceTree = "<group>";
-		};
-		C9652B2A1B18DBD156BE39A2E4390D5A /* Channel */ = {
-			isa = PBXGroup;
-			children = (
-				C4DFFEC48B76426A4B4301ACFD6E64D4 /* AnyCodable.swift */,
-				56CBCBD70A2A83BC560A4EE8DBD340FC /* Channel.swift */,
-				573569A395781B00F409B84EF740973A /* Codec.swift */,
-				86A0F73CEFB6213020A7DE670863BB3B /* DataRequest.swift */,
-				A55E359824B44A402715D1E004C11A48 /* StatusRequest.swift */,
-			);
-			path = Channel;
-			sourceTree = "<group>";
-		};
-		CDDDFE2DD6581660371FA36E3B09E0F4 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				9FFF14937D985D7041BFBDC3729EF1D7 /* .. */,
-			);
-			name = ..;
-			path = "../../../../../../../../../Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.5.2/ios";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				04A3347AF743E729F7DD24E22C1AB032 /* Development Pods */,
+				8324535E822C8C423D6AA5FEC3940164 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				B3C16D65C6B0041FABC2AB0D1772A0EC /* Products */,
+				B66261D3AD71CD797E2AF65F3985D6B9 /* Products */,
 				791C6E4B424AF06279F8918FA67B8ED6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D00A82367FD0D3F522EE5EFC8BBC701A /* .symlinks */ = {
+		EBD5EA902B3ECC39CAEE5E043BF4C469 /* SnowM */ = {
 			isa = PBXGroup;
 			children = (
-				3FA29ED2DA47AD0D5D378107EB1D153B /* plugins */,
+				84BD099C3CECD8611CAF101AA2A00AB1 /* RNLBeacon.h */,
+				474810F90274B7627D8D5670B092C1C3 /* RNLBeacon.m */,
+				158ECDFAED933BC4A73F271BEF328BEF /* RNLBeacon+Distance.h */,
+				24E842115E1A14B6D98B933CBF4112DE /* RNLBeacon+Distance.m */,
+				A75C8C2968BE5C080C498E963E9EB4B8 /* RNLBeaconParser.h */,
+				33591390BF8F70F333851884FD72E9A4 /* RNLBeaconParser.m */,
+				D32E4B47BDE23CF2841D3BEBA508C2AA /* RNLBeaconScanner.h */,
+				542FFF94DD428C5630127D1110372EA9 /* RNLBeaconScanner.m */,
+				3B4FC54E92988EBB746727C90A6E24A5 /* RNLBeaconTableViewController.h */,
+				1FBB6FB1BCE6EAA4AF9C19701D2D8B88 /* RNLBeaconTableViewController.m */,
+				6CC83C7A57132BDE2EBB68ED780B1816 /* RNLBeaconTracker.h */,
+				D5C8CA2BF54DB354109CB9123C114A2A /* RNLBeaconTracker.m */,
+				90BEFDA6363C116179D6DFD9DFBAD5B3 /* RNLLocationTracker.h */,
+				A2B228E21C82E327AA05E832E39F548F /* RNLLocationTracker.m */,
+				CAD095DE5874048AE0518C111C5C9E05 /* RNLSignalMeasurement.h */,
+				E1E4E4A0A6B1F9EB2F5A48EF499DF7D3 /* RNLSignalMeasurement.m */,
+				495065CEC706DA761CA703D50FE0E4DC /* RNLURLBeaconCompressor.h */,
+				F8BB091EC3946BA92CCB31D18FE4E9EF /* RNLURLBeaconCompressor.m */,
 			);
-			path = .symlinks;
+			name = SnowM;
+			path = SnowM;
 			sourceTree = "<group>";
 		};
-		D0DAB815E4474A8A744701CD455350E9 /* Flutter */ = {
+		F3A1FD166B60A6FAD17057C6123A747C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				FE23D816E4A13857CBA4A65C53DA1938 /* Frameworks */,
-				5EAF5184E8730C5ECC6F875221990E86 /* Pod */,
-				62D1082B28A0D11CFF915234E96BDA5E /* Support Files */,
-			);
-			name = Flutter;
-			path = ../.symlinks/flutter/ios;
-			sourceTree = "<group>";
-		};
-		D1CC26B4EBE0ADBBBCA31C76326EE82D /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				BCDAC6511E083AA653BD6C80B91088AE /* .. */,
-			);
-			path = ..;
-			sourceTree = "<group>";
-		};
-		DC1CE22580DF5CB033C9E0F216601703 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				80661D2FA4D997927E7497CE9926F2E8 /* beacons.podspec */,
-				3DF6F697C3356EB3DAD07C7478EF5304 /* LICENSE */,
+				11735FC29BCBFA37BE59D84E8948A05E /* Flutter.podspec */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		E22BEFB8459471FE37A06E7D199EDF4B /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				DF00A866BA3D2FF585DA7B6D9EB2667F /* flutter_local_notifications.podspec */,
-				C74CB1F7C3D2DC75B1BD0C332AD79D83 /* LICENSE */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		E67D21F65A52BC1E7C81993E1ADB2004 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				2A7E9281B704EEC22C51B42599B1A52C /* .. */,
-			);
-			path = ..;
-			sourceTree = "<group>";
-		};
-		EADA7EA6DA213194884475E4CB70F9E3 /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				D00A82367FD0D3F522EE5EFC8BBC701A /* .symlinks */,
-			);
-			path = ios;
-			sourceTree = "<group>";
-		};
-		EF27D23123EB2CB1009A02CF /* StreamChannel */ = {
-			isa = PBXGroup;
-			children = (
-				EF27D23223EB2CE1009A02CF /* FlutterStreamsChannel.m */,
-				EF27D23423EB2D0E009A02CF /* FlutterStreamsChannel.h */,
-			);
-			path = StreamChannel;
-			sourceTree = "<group>";
-		};
-		FE23D816E4A13857CBA4A65C53DA1938 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B0C44AC4036DD0247B5BB8F8CBD93A5 /* Flutter.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FE6DD989CC774080BE525D98D5D9E5F7 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				D1CC26B4EBE0ADBBBCA31C76326EE82D /* .. */,
-			);
-			path = ..;
-			sourceTree = "<group>";
-		};
-		FFAB7C4A6A9311175398E233E9A0819B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E296AFF8812361BFB03F2705A10F287A /* flutter_local_notifications.modulemap */,
-				53D6B4297E4F4692D437B2B8549778BD /* flutter_local_notifications.xcconfig */,
-				85E3F96143418A811F3596273CD2ABFE /* flutter_local_notifications-dummy.m */,
-				248E2F518C5004D59E673B39E438C34D /* flutter_local_notifications-Info.plist */,
-				8ADD530789331C9A64ADAC4DF24C2843 /* flutter_local_notifications-prefix.pch */,
-				E256C59E310E0DFC42749EAD7C4242B4 /* flutter_local_notifications-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../../../../Pods/Target Support Files/flutter_local_notifications";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A7D10001ECC9FD22F40E38C6C46E724E /* Headers */ = {
+		0B1F20FEA66F8E070291F830C85929F4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB44EA64F6B3CFB312FC31EC4A9C2D21 /* Pods-Runner-umbrella.h in Headers */,
+				BDAC7D2AD547FDC3E204E39B2BE9953A /* FlutterStreamsChannel.h in Headers */,
+				8E5F648BFA178676A4D7D05895F0F3C2 /* omnys_beacons-umbrella.h in Headers */,
+				74B3C4E5F45E826A75D87EAB89D2325E /* OmnysBeaconsPlugin.h in Headers */,
+				4DF00BEC21B1796881A02AE392D3A6F1 /* RNLBeacon.h in Headers */,
+				962120FD615771430E5AF710C68D3037 /* RNLBeacon+Distance.h in Headers */,
+				D7E9C4F9A76F0BC0D0C86BA9B944C7F3 /* RNLBeaconParser.h in Headers */,
+				2F0DBCEAF7FA9C4BB8874E1F216F7C8E /* RNLBeaconScanner.h in Headers */,
+				89190E1460829679A2113057D9F6F63A /* RNLBeaconTableViewController.h in Headers */,
+				57F0BF039A499A01A179B7570E1E088B /* RNLBeaconTracker.h in Headers */,
+				AC6BFB65595CD35407BEE302FF4A1B0D /* RNLLocationTracker.h in Headers */,
+				2D2F4A62B6FA36A610A974D5EA68FCF2 /* RNLSignalMeasurement.h in Headers */,
+				6948F27A27152196198E624A46A2096E /* RNLURLBeaconCompressor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7A74BB92A673887073000FD7FB48249 /* Headers */ = {
+		8E9F5882BD94FE4E7EFD178A9A345B2A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C70D5D15B066C98C422600AF6BF32C5 /* beacons-umbrella.h in Headers */,
-				9E6E1035F14FCB5CD5ECC331279D80AD /* BeaconsPlugin.h in Headers */,
-				831D83310862C4B3EA8ABFD2D84FABEE /* RNLBeacon+Distance.h in Headers */,
-				1B95814FF64072C44EB90D9C6CBD9C1D /* RNLBeacon.h in Headers */,
-				92C3F6DEB354B18403F0F7E3BCF5A3DF /* RNLBeaconParser.h in Headers */,
-				A5AC838DC7A20E1617CA5056762D7474 /* RNLBeaconScanner.h in Headers */,
-				F575E5933910FD36BE865E4814AD06F4 /* RNLBeaconTableViewController.h in Headers */,
-				FD9E44667FA30AA7CE3A8518F78F9782 /* RNLBeaconTracker.h in Headers */,
-				EDF33EF839F6B0B54CFC8CE6759F6857 /* RNLLocationTracker.h in Headers */,
-				A90269BB71A4E352571927E49F77D1A9 /* RNLSignalMeasurement.h in Headers */,
-				8039ECB8C2544D5F4DD48D62F73E399E /* RNLURLBeaconCompressor.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D1809EA5971348E9E10910800D5A0C65 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5B9C83EDFE69372B5E613C23CB999FB /* flutter_local_notifications-umbrella.h in Headers */,
-				4A4BDCF96E43C8DDE4B0A0099B6913E4 /* FlutterLocalNotificationsPlugin.h in Headers */,
-				3A314E972C96F50E95F20ACEAE74FFA3 /* NotificationDetails.h in Headers */,
-				3E55B2AEE4060D4EFB634E66E6EC18DE /* NotificationTime.h in Headers */,
+				2E3B45A348F68EFCBFC4B213A46B5252 /* Pods-Runner-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,61 +515,41 @@
 /* Begin PBXNativeTarget section */
 		8B74B458B450D74B75744B87BD747314 /* Pods-Runner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB9FE6BDED752022A9A1B762C711E87E /* Build configuration list for PBXNativeTarget "Pods-Runner" */;
+			buildConfigurationList = 2A88E0617D33AC777974CA5186818753 /* Build configuration list for PBXNativeTarget "Pods-Runner" */;
 			buildPhases = (
-				A7D10001ECC9FD22F40E38C6C46E724E /* Headers */,
-				C4C569A3119DE9D97319F5E2B098B7F4 /* Sources */,
-				2E65331593A85D2B51454D3A08480605 /* Frameworks */,
-				C2D30AEB5D5C118195F3250556D3B2F5 /* Resources */,
+				8E9F5882BD94FE4E7EFD178A9A345B2A /* Headers */,
+				D38A5EBEC2F08E5EBB9C248E9A15F651 /* Sources */,
+				236DCB112539099B40DB0BD15842C406 /* Frameworks */,
+				699C21690DC280EB6C9187BDF45A5FA8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6D32B8F698A08FA3D2D41CCD284DE86F /* PBXTargetDependency */,
-				3802FCC5B6317C81B66F9A954F654A9F /* PBXTargetDependency */,
-				7137289F6F984965F503F28359818FDB /* PBXTargetDependency */,
+				916892D7C6C711938A293D9FFACDC40D /* PBXTargetDependency */,
+				02E19B774E362C319522B63944C5D74E /* PBXTargetDependency */,
 			);
 			name = "Pods-Runner";
-			productName = "Pods-Runner";
-			productReference = 669E8F25E1897672BDB80B7EB784DA24 /* Pods_Runner.framework */;
+			productName = Pods_Runner;
+			productReference = 669E8F25E1897672BDB80B7EB784DA24 /* Pods-Runner */;
 			productType = "com.apple.product-type.framework";
 		};
-		EEB41AE711CFE0270A8147036B994D09 /* beacons */ = {
+		E182794E36E77C7A62B228286895FFBE /* omnys_beacons */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B89B8FC2FEF3B66F39CB212E6469ECE3 /* Build configuration list for PBXNativeTarget "beacons" */;
+			buildConfigurationList = 46BA980E7375E50D720C7CD4CF73C84D /* Build configuration list for PBXNativeTarget "omnys_beacons" */;
 			buildPhases = (
-				C7A74BB92A673887073000FD7FB48249 /* Headers */,
-				3A194D7D14D19F018B9FE79E757914E4 /* Sources */,
-				BE056425650FB6904A8947DE417827F6 /* Frameworks */,
-				F42D4BB59B8EFD538EA5AAB449106BD0 /* Resources */,
+				0B1F20FEA66F8E070291F830C85929F4 /* Headers */,
+				FF6C031C4D9388EE883A2423D8F87EA3 /* Sources */,
+				4774E93755862F3415163521DE903F21 /* Frameworks */,
+				66A6E80F10767905A616FE50D93D4119 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				17584BAD600C6500602F987FE7177F5A /* PBXTargetDependency */,
+				C79852A04C23EB10431BF48C33DF7DF9 /* PBXTargetDependency */,
 			);
-			name = beacons;
-			productName = beacons;
-			productReference = 1D568399649E33DF9D900322BE1A6CF0 /* beacons.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F64AA263B9D7877A7D58823DEF7F113B /* flutter_local_notifications */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D6DC9FF7255AC594EE2EFC43D110101B /* Build configuration list for PBXNativeTarget "flutter_local_notifications" */;
-			buildPhases = (
-				D1809EA5971348E9E10910800D5A0C65 /* Headers */,
-				131BFE119C53A6CCFA29D84482BE1E8C /* Sources */,
-				B4B3EB8792AF22760A83079B2C7E3819 /* Frameworks */,
-				7DA22A28EE68D5FBFBB20E3BE7E07403 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EFE9FD491430D8300EB12BA9D5AC7C6C /* PBXTargetDependency */,
-			);
-			name = flutter_local_notifications;
-			productName = flutter_local_notifications;
-			productReference = D2818DB76C14B8736924E987E37A9823 /* flutter_local_notifications.framework */;
+			name = omnys_beacons;
+			productName = omnys_beacons;
+			productReference = F07CF491D0309BD7DBB42F880E28071F /* omnys_beacons */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -815,45 +558,38 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = B3C16D65C6B0041FABC2AB0D1772A0EC /* Products */;
+			productRefGroup = B66261D3AD71CD797E2AF65F3985D6B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EEB41AE711CFE0270A8147036B994D09 /* beacons */,
 				1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */,
-				F64AA263B9D7877A7D58823DEF7F113B /* flutter_local_notifications */,
+				E182794E36E77C7A62B228286895FFBE /* omnys_beacons */,
 				8B74B458B450D74B75744B87BD747314 /* Pods-Runner */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7DA22A28EE68D5FBFBB20E3BE7E07403 /* Resources */ = {
+		66A6E80F10767905A616FE50D93D4119 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2D30AEB5D5C118195F3250556D3B2F5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F42D4BB59B8EFD538EA5AAB449106BD0 /* Resources */ = {
+		699C21690DC280EB6C9187BDF45A5FA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -863,103 +599,150 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		131BFE119C53A6CCFA29D84482BE1E8C /* Sources */ = {
+		D38A5EBEC2F08E5EBB9C248E9A15F651 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE1D1B18B75F4973EC68082940D747A /* flutter_local_notifications-dummy.m in Sources */,
-				FFB61980071B351AD06D8043A3903DD3 /* FlutterLocalNotificationsPlugin.m in Sources */,
-				3483FEE8766657BA6C10053DFFA5AFF2 /* NotificationDetails.m in Sources */,
-				28025A0EC01655AB29E7DEDF339BEFFB /* NotificationTime.m in Sources */,
+				0D04201873690B5C8AD2C80212FDAF50 /* Pods-Runner-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A194D7D14D19F018B9FE79E757914E4 /* Sources */ = {
+		FF6C031C4D9388EE883A2423D8F87EA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7807121C99998C94C078F4E984A17155 /* AnyCodable.swift in Sources */,
-				0A2C0BC8AAFF044684736B8E4755D3AC /* BackgroundMonitoringEvent.swift in Sources */,
-				EF27D23323EB2CE1009A02CF /* FlutterStreamsChannel.m in Sources */,
-				3310432F369BABE48CDBCDE100EFEA24 /* Beacon.swift in Sources */,
-				83A08259454464BDCE588600E376D23D /* BeaconRegion.swift in Sources */,
-				59C2A9D159CE68933A7CDEDDAEDA2CF3 /* beacons-dummy.m in Sources */,
-				4060969B22C19BC42AF2C98E3E8821D2 /* BeaconsPlugin.m in Sources */,
-				C4B34B7852B62EEEA498A1C1170A2C14 /* Channel.swift in Sources */,
-				387BF7B16DA55143A9C429D6C8714781 /* Codec.swift in Sources */,
-				D990912B56356899CE735BD40B6ACC1C /* DataRequest.swift in Sources */,
-				AFB1EC48992BD3EFAC081A19A1DA3DE4 /* LocationClient.swift in Sources */,
-				C9907151A7FCECCC29BD708E77252A8A /* LocationExtension.swift in Sources */,
-				D8389E0159DA61C19A36460FDA91478B /* LocationHelper.swift in Sources */,
-				624BC3A5E41E2999B32D1125A83F3A74 /* MonitoringState.swift in Sources */,
-				8F5B10D8E00AE42AB23C0ABEC6ED7C5F /* Permission.swift in Sources */,
-				AD55D34726FCB2ED0B219D35CD275831 /* Proximity.swift in Sources */,
-				74C0CC329B8668516A3703965BF478BB /* Result.swift in Sources */,
-				4B31FE9A3B8A8CBF24876105D04930BC /* RNLBeacon+Distance.m in Sources */,
-				52C310111E4FBF6A1B8149CCD26E714C /* RNLBeacon.m in Sources */,
-				3D07D1A59F67592FA9C7A7C885234CD2 /* RNLBeaconParser.m in Sources */,
-				F5F809A81C8DA7CECEC5565D77AF5FCD /* RNLBeaconScanner.m in Sources */,
-				8426FD14E9E665B672CABF6ACFA50557 /* RNLBeaconTableViewController.m in Sources */,
-				62556FF9E900C1C7DA1BACD1C756730F /* RNLBeaconTracker.m in Sources */,
-				76931BF8FE2EB917C48586EAFB992826 /* RNLLocationTracker.m in Sources */,
-				42E6F65A8A80B87FB14AD553AA834F1E /* RNLSignalMeasurement.m in Sources */,
-				76551E2F87AED8F28D14A2B6BB7741AF /* RNLURLBeaconCompressor.m in Sources */,
-				05ECC760C9D7504880BB52A24CCCF976 /* Settings.swift in Sources */,
-				20FB3157A46C60DCABC4FEE753F1F40B /* StatusRequest.swift in Sources */,
-				553DCE72282A360104EE245DB40294EB /* SwiftBeaconsPlugin.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4C569A3119DE9D97319F5E2B098B7F4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				41AFFA22BD0D6E29DD45BBF9C4EF7467 /* Pods-Runner-dummy.m in Sources */,
+				8AE4FD7E5225D9B6EAC227AB399B2CBA /* AnyCodable.swift in Sources */,
+				743C94ABF7E5E108571FF274A9F765FE /* BackgroundMonitoringEvent.swift in Sources */,
+				94DC579FB49C3F57CA9116D27FFC3D44 /* Beacon.swift in Sources */,
+				E6089A51A6F11B317E998DF0AB102F3E /* BeaconRegion.swift in Sources */,
+				9D120978700ABD8CE7213B0C5E0104F4 /* Channel.swift in Sources */,
+				5276E78B48D6C39347A9063D0BD53090 /* Codec.swift in Sources */,
+				FF15DCBFDBE9171F0FF488EA2E75889A /* DataRequest.swift in Sources */,
+				F30069BA3DDDC078DC8D6463FEEC4D13 /* FlutterStreamsChannel.m in Sources */,
+				0FB362946D8CEF6B1B970E6F3D77F9DD /* LocationClient.swift in Sources */,
+				9CF50EA872F7AE6C1BD3DB8BACCC3A28 /* LocationExtension.swift in Sources */,
+				3996418BEE1DD47D927B7BCC8E15E5EB /* LocationHelper.swift in Sources */,
+				3138E8CDD64C48224EA60D968FB34DA3 /* MonitoringState.swift in Sources */,
+				2E75D980141C147FA1B016953AD2C6C2 /* omnys_beacons-dummy.m in Sources */,
+				D708B406D4766896B26C220B5120DC58 /* OmnysBeaconsPlugin.m in Sources */,
+				D1A50D4F4A3D68B05729B1D1555B39CC /* Permission.swift in Sources */,
+				652CDB303092EDCAE51486F795606D59 /* Proximity.swift in Sources */,
+				CA63151526A5EC03B1D6343837808061 /* Result.swift in Sources */,
+				2EC90FA0EFB5EAF0EBE33E5F276B4BA3 /* RNLBeacon.m in Sources */,
+				C560A670B353EE06EACFC820C8A4213D /* RNLBeacon+Distance.m in Sources */,
+				6AF780A745CBC7CA827A26BFBD7E5CF7 /* RNLBeaconParser.m in Sources */,
+				5E7E2F861F4D866D183A4F4E7C258AF0 /* RNLBeaconScanner.m in Sources */,
+				00297997854D83EA091B67A3C4F8B9B7 /* RNLBeaconTableViewController.m in Sources */,
+				0F78AFCE2A273AFC739AAFCB3557FB83 /* RNLBeaconTracker.m in Sources */,
+				5AF07FA4057DD1C9492B5CBF3272A112 /* RNLLocationTracker.m in Sources */,
+				DFCB6E9EF8093E5D5A2BB9E7CAF28C81 /* RNLSignalMeasurement.m in Sources */,
+				33849A707F2BF2F5338CD5BF958089D3 /* RNLURLBeaconCompressor.m in Sources */,
+				62A79768D0213F59D48ED35112A989BB /* Settings.swift in Sources */,
+				1A44270C3127AA4AA455482995D5E433 /* StatusRequest.swift in Sources */,
+				53CB1A772DF0EE042804950DD053E1DF /* SwiftOmnysBeaconsPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		17584BAD600C6500602F987FE7177F5A /* PBXTargetDependency */ = {
+		02E19B774E362C319522B63944C5D74E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = omnys_beacons;
+			target = E182794E36E77C7A62B228286895FFBE /* omnys_beacons */;
+			targetProxy = C850D981E1825A0461B926E54765A806 /* PBXContainerItemProxy */;
+		};
+		916892D7C6C711938A293D9FFACDC40D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Flutter;
 			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
-			targetProxy = 1374E38EB991DD03C96C0640B9AC727B /* PBXContainerItemProxy */;
+			targetProxy = 9CB8F95B643F611F338AEC83CD1D2D83 /* PBXContainerItemProxy */;
 		};
-		3802FCC5B6317C81B66F9A954F654A9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = beacons;
-			target = EEB41AE711CFE0270A8147036B994D09 /* beacons */;
-			targetProxy = EA04CC410F89B0003EDD3B3DA2225811 /* PBXContainerItemProxy */;
-		};
-		6D32B8F698A08FA3D2D41CCD284DE86F /* PBXTargetDependency */ = {
+		C79852A04C23EB10431BF48C33DF7DF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Flutter;
 			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
-			targetProxy = ACF5669442A7367AB10289AF6DAB7547 /* PBXContainerItemProxy */;
-		};
-		7137289F6F984965F503F28359818FDB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = flutter_local_notifications;
-			target = F64AA263B9D7877A7D58823DEF7F113B /* flutter_local_notifications */;
-			targetProxy = 05F8D88862D4EDD4DC5FD39EB94E544C /* PBXContainerItemProxy */;
-		};
-		EFE9FD491430D8300EB12BA9D5AC7C6C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Flutter;
-			target = 1EFDDC32A34D56D411E640A81DCD9E73 /* Flutter */;
-			targetProxy = 5339D4B2EDA2BAE1ADE8FBEEA9107057 /* PBXContainerItemProxy */;
+			targetProxy = 5E9C37BD2B4A60276C0B666C4801BD94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1DB9BA2180A36801AE64ED08CB059B78 /* Debug */ = {
+		026B2FFB709BDB71E070B346915018EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDAECCF4B5E08124ED410F09FD5A5DF9 /* Pods-Runner.debug.xcconfig */;
+			baseConfigurationReference = 9927BCF75684518F0F0B647C5E66D67D /* omnys_beacons.debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/omnys_beacons/omnys_beacons-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/omnys_beacons/omnys_beacons-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/omnys_beacons/omnys_beacons.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = omnys_beacons;
+				PRODUCT_NAME = omnys_beacons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		123B0D65A35211FC43B8BEE770443D25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C41D0375EDEE258EA0142ADCD5E9FC08 /* Flutter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43A86CBAED31FC56EF3D627F8E1AF6D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FA70CA298C392CB8332ADEEDD1CE85 /* Pods-Runner.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -969,13 +752,31 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
@@ -983,80 +784,69 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		269912B3981061C19AB6D54A65709982 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F8D6DCF9F34C035391495B13533C246 /* beacons.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/beacons/beacons-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/beacons/beacons-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/beacons/beacons.modulemap";
-				PRODUCT_MODULE_NAME = beacons;
-				PRODUCT_NAME = beacons;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		367E0623ECEE4E975AC7EA1F1AF543FD /* Debug */ = {
+		6C043404693B6BFBC07C0BFC2D0C3070 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F8D6DCF9F34C035391495B13533C246 /* beacons.xcconfig */;
+			baseConfigurationReference = A95F7BD57FAE1299E53E98E62E2A8F0D /* omnys_beacons.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/beacons/beacons-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/beacons/beacons-Info.plist";
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/omnys_beacons/omnys_beacons-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/omnys_beacons/omnys_beacons-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/beacons/beacons.modulemap";
-				PRODUCT_MODULE_NAME = beacons;
-				PRODUCT_NAME = beacons;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/omnys_beacons/omnys_beacons.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = omnys_beacons;
+				PRODUCT_NAME = omnys_beacons;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1079,6 +869,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1101,145 +892,59 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		58AABA9A1666C6BEC36485850FB5A7E1 /* Debug */ = {
+		9498D2532E60DBDF41603C51B60E35E8 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53D6B4297E4F4692D437B2B8549778BD /* flutter_local_notifications.xcconfig */;
+			baseConfigurationReference = C41D0375EDEE258EA0142ADCD5E9FC08 /* Flutter.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/flutter_local_notifications/flutter_local_notifications-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/flutter_local_notifications/flutter_local_notifications-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/flutter_local_notifications/flutter_local_notifications.modulemap";
-				PRODUCT_MODULE_NAME = flutter_local_notifications;
-				PRODUCT_NAME = flutter_local_notifications;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6DB88287FBF0DDC642169D4FE56485F2 /* Profile */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_PROFILE=1",
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Profile;
 		};
-		6ECA79AA966ED5793D9B837779E7C75D /* Release */ = {
+		A045C7A6D99F4F60840B1F19D32848E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53D6B4297E4F4692D437B2B8549778BD /* flutter_local_notifications.xcconfig */;
+			baseConfigurationReference = 9153E8D5E9E67BB01E09D13FADAA978F /* Flutter.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/flutter_local_notifications/flutter_local_notifications-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/flutter_local_notifications/flutter_local_notifications-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/flutter_local_notifications/flutter_local_notifications.modulemap";
-				PRODUCT_MODULE_NAME = flutter_local_notifications;
-				PRODUCT_NAME = flutter_local_notifications;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1262,6 +967,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1287,7 +993,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1300,12 +1006,68 @@
 			};
 			name = Debug;
 		};
-		82D882893FDB102517BD49AB56AFC8BA /* Profile */ = {
+		B85E8DB1A87A8967AD15DB4EFCB44716 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAECCF4B5E08124ED410F09FD5A5DF9 /* Pods-Runner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C254C547EAFE7022984E4FDD1DD86419 /* Profile */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F79F8269DC34AC56BB3D1D9652C0D86 /* Pods-Runner.profile.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1315,13 +1077,31 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
@@ -1330,151 +1110,120 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Profile;
 		};
-		836170847861CA04A187FB76B568BA09 /* Profile */ = {
+		DCF364D2CA5F270CAD355FD2FAFE3B13 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F8D6DCF9F34C035391495B13533C246 /* beacons.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_PROFILE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Profile;
+		};
+		F43A9DC7089FE7D4B981D3BA09056312 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A95F7BD57FAE1299E53E98E62E2A8F0D /* omnys_beacons.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/beacons/beacons-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/beacons/beacons-Info.plist";
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "$(inherited) armv7";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64\"",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"\"/Users/francesco/dev-tools/flutter/bin/cache/artifacts/engine/ios-release/Flutter.xcframework/ios-arm64_x86_64-simulator\"",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "Target Support Files/omnys_beacons/omnys_beacons-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/omnys_beacons/omnys_beacons-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/beacons/beacons.modulemap";
-				PRODUCT_MODULE_NAME = beacons;
-				PRODUCT_NAME = beacons;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/omnys_beacons/omnys_beacons.modulemap";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Flutter,
+				);
+				PRODUCT_MODULE_NAME = omnys_beacons;
+				PRODUCT_NAME = omnys_beacons;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Profile;
-		};
-		895E2867E73A4F53A022BAE5AD196379 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46A287628778E07693879B5D66DD5B7A /* Flutter.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		93C34A4543139EA55D7995A36215C307 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2FA70CA298C392CB8332ADEEDD1CE85 /* Pods-Runner.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-Runner/Pods-Runner-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Runner/Pods-Runner.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A94EBF4E8F127A41691C10095F7BBBA9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46A287628778E07693879B5D66DD5B7A /* Flutter.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B064E1C981D836A5C76FDAC49FCB568E /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46A287628778E07693879B5D66DD5B7A /* Flutter.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Profile;
-		};
-		CA96EDDE22039DADE25777BD46A1ED68 /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53D6B4297E4F4692D437B2B8549778BD /* flutter_local_notifications.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/flutter_local_notifications/flutter_local_notifications-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/flutter_local_notifications/flutter_local_notifications-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/flutter_local_notifications/flutter_local_notifications.modulemap";
-				PRODUCT_MODULE_NAME = flutter_local_notifications;
-				PRODUCT_NAME = flutter_local_notifications;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1483,12 +1232,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A88E0617D33AC777974CA5186818753 /* Build configuration list for PBXNativeTarget "Pods-Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B85E8DB1A87A8967AD15DB4EFCB44716 /* Debug */,
+				C254C547EAFE7022984E4FDD1DD86419 /* Profile */,
+				43A86CBAED31FC56EF3D627F8E1AF6D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46BA980E7375E50D720C7CD4CF73C84D /* Build configuration list for PBXNativeTarget "omnys_beacons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				026B2FFB709BDB71E070B346915018EB /* Debug */,
+				F43A9DC7089FE7D4B981D3BA09056312 /* Profile */,
+				6C043404693B6BFBC07C0BFC2D0C3070 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
-				6DB88287FBF0DDC642169D4FE56485F2 /* Profile */,
-				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				DCF364D2CA5F270CAD355FD2FAFE3B13 /* Profile */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1496,39 +1265,9 @@
 		94078A06C17E946ADC1F2C06726219E5 /* Build configuration list for PBXAggregateTarget "Flutter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				895E2867E73A4F53A022BAE5AD196379 /* Debug */,
-				B064E1C981D836A5C76FDAC49FCB568E /* Profile */,
-				A94EBF4E8F127A41691C10095F7BBBA9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B89B8FC2FEF3B66F39CB212E6469ECE3 /* Build configuration list for PBXNativeTarget "beacons" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				367E0623ECEE4E975AC7EA1F1AF543FD /* Debug */,
-				836170847861CA04A187FB76B568BA09 /* Profile */,
-				269912B3981061C19AB6D54A65709982 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D6DC9FF7255AC594EE2EFC43D110101B /* Build configuration list for PBXNativeTarget "flutter_local_notifications" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				58AABA9A1666C6BEC36485850FB5A7E1 /* Debug */,
-				CA96EDDE22039DADE25777BD46A1ED68 /* Profile */,
-				6ECA79AA966ED5793D9B837779E7C75D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB9FE6BDED752022A9A1B762C711E87E /* Build configuration list for PBXNativeTarget "Pods-Runner" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DB9BA2180A36801AE64ED08CB059B78 /* Debug */,
-				82D882893FDB102517BD49AB56AFC8BA /* Profile */,
-				93C34A4543139EA55D7995A36215C307 /* Release */,
+				A045C7A6D99F4F60840B1F19D32848E6 /* Debug */,
+				9498D2532E60DBDF41603C51B60E35E8 /* Profile */,
+				123B0D65A35211FC43B8BEE770443D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

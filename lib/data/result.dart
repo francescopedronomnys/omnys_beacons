@@ -1,19 +1,18 @@
 //  Copyright (c) 2018 Loup Inc.
 //  Licensed under Apache License v2.0
 
-part of beacons;
+part of omnys_beacons;
 
 class BeaconsResult {
   BeaconsResult._(
     this.isSuccessful,
     this.error,
   ) {
-    assert(isSuccessful != null);
     assert(isSuccessful || error != null);
   }
 
   final bool isSuccessful;
-  final BeaconsResultError error;
+  final BeaconsResultError? error;
 
   String dataToString() {
     return "without additional data";
@@ -30,16 +29,16 @@ class BeaconsResult {
 }
 
 abstract class BeaconsDataResult {
-  BeaconRegion get region;
+  BeaconRegion? get region;
 }
 
 class RangingResult extends BeaconsResult implements BeaconsDataResult {
   RangingResult._(
-      bool isSuccessful, BeaconsResultError error, this.region, this.beacons)
+      bool isSuccessful, BeaconsResultError? error, this.region, this.beacons)
       : super._(isSuccessful, error);
 
   @override
-  final BeaconRegion region;
+  final BeaconRegion? region;
   final List<Beacon> beacons;
 
   bool get isEmpty => beacons.isEmpty;
@@ -48,25 +47,25 @@ class RangingResult extends BeaconsResult implements BeaconsDataResult {
 
   @override
   String dataToString() {
-    return "${beacons.length} for region: ${region.identifier}";
+    return "${beacons.length} for region: ${region?.identifier}";
   }
 }
 
 class MonitoringResult extends BeaconsResult implements BeaconsDataResult {
   MonitoringResult._(
     bool isSuccessful,
-    BeaconsResultError error,
+    BeaconsResultError? error,
     this.region,
     this.event,
   ) : super._(isSuccessful, error);
 
   @override
-  final BeaconRegion region;
-  final MonitoringState event;
+  final BeaconRegion? region;
+  final MonitoringState? event;
 
   @override
   String dataToString() {
-    return "$event for region: ${region.identifier}";
+    return "$event for region: ${region?.identifier}";
   }
 }
 
@@ -95,9 +94,6 @@ class BeaconsResultError {
       case BeaconsResultErrorType.monitoringUnavailable:
         return 'monitoring unavailable';
     }
-
-    assert(false);
-    return null;
   }
 }
 
@@ -123,6 +119,6 @@ BeaconsResultErrorType _mapResultErrorTypeJson(String jsonValue) {
       return BeaconsResultErrorType.monitoringUnavailable;
     default:
       assert(false, 'cannot parse json to BeaconsResultErrorType: $jsonValue');
-      return null;
+      throw Exception("Parsing error");
   }
 }
