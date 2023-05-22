@@ -21,7 +21,10 @@ import io.flutter.embedding.engine.plugins.lifecycle.FlutterLifecycleAdapter;
 
 
 /** OmnysBeaconsPlugin */
-class OmnysBeaconsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
+class OmnysBeaconsPlugin : FlutterPlugin,
+    //TODO this could probably be removed, because Channels implements it
+    MethodCallHandler,
+    ActivityAware {
 
     private val permissionClient = PermissionClient()
     private val beaconClient = BeaconsClient(permissionClient)

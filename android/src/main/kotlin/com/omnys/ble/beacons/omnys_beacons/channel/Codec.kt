@@ -4,6 +4,7 @@
 package com.omnys.ble.beacons.omnys_beacons.channel
 
 import com.omnys.ble.beacons.omnys_beacons.data.BackgroundMonitoringEvent
+import com.omnys.ble.beacons.omnys_beacons.data.Configuration
 import com.omnys.ble.beacons.omnys_beacons.data.MonitoringState
 import com.omnys.ble.beacons.omnys_beacons.data.Permission
 import com.omnys.ble.beacons.omnys_beacons.data.RegionModel
@@ -22,6 +23,9 @@ object Codec {
     fun encodeResult(result: Result): String =
             moshi.adapter(Result::class.java).toJson(result)
 
+    fun decodeRegisterBackgroundCallback(arguments: Any?): Long =
+        arguments as Long
+
     fun encodeBackgroundMonitoringEvent(event: BackgroundMonitoringEvent): String =
             moshi.adapter(BackgroundMonitoringEvent::class.java).toJson(event)
 
@@ -30,14 +34,12 @@ object Codec {
 
     fun decodeDataRequest(arguments: Any?): DataRequest =
             moshi.adapter(DataRequest::class.java).fromJson(arguments!! as String)!!
-
     fun decodeStatusRequest(arguments: Any?): StatusRequest =
             moshi.adapter(StatusRequest::class.java).fromJson(arguments!! as String)!!
 
-    fun decodeSettings(arguments: Any?): Settings =
-            moshi.adapter(Settings::class.java).fromJson(arguments!! as String)!!
+    fun decodeConfiguration(arguments: Any?): Configuration =
+        moshi.adapter(Configuration::class.java).fromJson(arguments!! as String)!!
 
     fun decodeRegion(arguments: Any?): RegionModel =
             moshi.adapter(RegionModel::class.java).fromJson(arguments!! as String)!!
-
 }

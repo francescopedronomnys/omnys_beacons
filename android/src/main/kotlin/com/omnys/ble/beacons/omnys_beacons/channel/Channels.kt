@@ -4,13 +4,14 @@
 package com.omnys.ble.beacons.omnys_beacons.channel
 
 
+import android.content.Context
 import android.os.Looper
 import android.util.Log
 import androidx.annotation.NonNull
 import com.omnys.ble.beacons.omnys_beacons.StreamsChannel
+import com.omnys.ble.beacons.omnys_beacons.data.Configuration
 import com.omnys.ble.beacons.omnys_beacons.data.Permission
 import com.omnys.ble.beacons.omnys_beacons.data.RegionModel
-import com.omnys.ble.beacons.omnys_beacons.data.Settings
 import com.omnys.ble.beacons.omnys_beacons.logic.BeaconsClient
 import com.omnys.ble.beacons.omnys_beacons.logic.PermissionClient
 import com.omnys.ble.beacons.omnys_beacons.logic.SharedMonitor
@@ -26,21 +27,14 @@ import kotlinx.coroutines.launch
 class Channels(
     private val permissionClient: PermissionClient, private val beaconsClient: BeaconsClient
 ) : MethodChannel.MethodCallHandler {
+    private var context : Context? = null;
     private var methodChannel: MethodChannel? = null
     private var rangingChannel: StreamsChannel? = null
 
     fun register(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-
+        context = flutterPluginBinding.applicationContext;
         methodChannel = MethodChannel(flutterPluginBinding.binaryMessenger, "omnys_beacons")
         methodChannel!!.setMethodCallHandler(this)
-
-        rangingChannel =
-            StreamsChannel(flutterPluginBinding.binaryMessenger, "omnys_beacons/ranging")
-        rangingChannel!!.setStreamHandlerFactory {
-            Handler(
-                beaconsClient, BeaconsClient.Operation.Kind.Ranging
-            )
-        }
 
         val monitoringChannel =
             StreamsChannel(flutterPluginBinding.binaryMessenger, "omnys_beacons/monitoring")
@@ -63,6 +57,8 @@ class Channels(
     fun unregister(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
         methodChannel?.setMethodCallHandler(null)
         rangingChannel?.setStreamHandlerFactory(null)
+
+        context = null;
     }
 
     override fun onMethodCall(call: MethodCall, result: MethodChannel.Result): Unit {
@@ -70,9 +66,10 @@ class Channels(
         when (call.method) {
             "checkStatus" -> checkStatus(Codec.decodeStatusRequest(call.arguments), result)
             "requestPermission" -> requestPermission(Codec.decodePermission(call.arguments), result)
-            "configure" -> configure(Codec.decodeSettings(call.arguments), result)
+            "configure" -> configure(Codec.decodeConfiguration(call.arguments), result)
             "startMonitoring" -> startMonitoring(Codec.decodeDataRequest(call.arguments), result)
             "stopMonitoring" -> stopMonitoring(Codec.decodeRegion(call.arguments), result)
+            "registerBackgroundCallback" -> registerBackgroundCallback(Codec.decodeRegisterBackgroundCallback(call.arguments), result)
             else -> result.notImplemented()
         }
     }
@@ -87,8 +84,14 @@ class Channels(
         }
     }
 
-    private fun configure(settings: Settings, result: MethodChannel.Result) {
-        beaconsClient.configure(settings)
+    private fun configure(configuration: Configuration, result: MethodChannel.Result) {
+        // save callback handle on storage
+        context!!.getSharedPreferences(SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE)
+            .edit()
+            .putLong(CALLBACK_DISPATCHER_HANDLE_KEY, configuration.callbackHandle)
+            .apply()
+
+        beaconsClient.configure(configuration.settings)
         result.success(null)
     }
 
@@ -100,6 +103,11 @@ class Channels(
 
     private fun stopMonitoring(region: RegionModel, result: MethodChannel.Result) {
         beaconsClient.stopMonitoring(region)
+        result.success(null)
+    }
+
+    private fun registerBackgroundCallback(backgroundCallbackHandle: Long, result: MethodChannel.Result) {
+        beaconsClient.registerBackgroundCallback(backgroundCallbackHandle)
         result.success(null)
     }
 
@@ -144,5 +152,19 @@ class Channels(
             beaconsClient.removeBackgroundMonitoringListener(listener!!)
             listener = null
         }
+    }
+
+    companion object {
+        @JvmStatic
+        private val TAG = "GeofencingPlugin"
+
+        @JvmStatic
+        val SHARED_PREFERENCES_KEY = "omnys_beacons_plugin_cache"
+
+        @JvmStatic
+        val CALLBACK_HANDLE_KEY = "callback_handle"
+
+        @JvmStatic
+        val CALLBACK_DISPATCHER_HANDLE_KEY = "callback_dispatch_handler"
     }
 }

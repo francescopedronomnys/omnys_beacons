@@ -6,6 +6,8 @@ package com.omnys.ble.beacons.omnys_beacons.data
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
 
+class Configuration(val callbackHandle: Long, val settings: Settings)
+
 class Settings(
         val logs: Logs
 ) {

@@ -5,30 +5,31 @@ package com.omnys.ble.beacons.omnys_beacons.logic
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.bluetooth.BluetoothAdapter
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.util.Log
-import com.omnys.ble.beacons.omnys_beacons.channel.DataRequest
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import org.altbeacon.beacon.*
-import org.altbeacon.beacon.logging.LogManager
-import org.altbeacon.beacon.logging.Loggers
-import java.util.*
-import org.altbeacon.beacon.BeaconParser;
-import android.bluetooth.BluetoothAdapter
 import com.omnys.ble.beacons.omnys_beacons.OmnysBeaconsPlugin
+import com.omnys.ble.beacons.omnys_beacons.channel.DataRequest
 import com.omnys.ble.beacons.omnys_beacons.data.BeaconModel
 import com.omnys.ble.beacons.omnys_beacons.data.MonitoringState
 import com.omnys.ble.beacons.omnys_beacons.data.Permission
 import com.omnys.ble.beacons.omnys_beacons.data.RegionModel
 import com.omnys.ble.beacons.omnys_beacons.data.Result
 import com.omnys.ble.beacons.omnys_beacons.data.Settings
+import io.flutter.embedding.engine.loader.FlutterLoader
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import org.altbeacon.beacon.*
+import org.altbeacon.beacon.logging.LogManager
+import org.altbeacon.beacon.logging.Loggers
+import java.util.*
 
 
-class BeaconsClient(private val permissionClient: PermissionClient) : BeaconConsumer, RangeNotifier, MonitorNotifier {
+class BeaconsClient(private val permissionClient: PermissionClient) : BeaconConsumer, RangeNotifier,
+    MonitorNotifier {
 
     companion object {
         private const val Tag = "beacons client"
@@ -37,18 +38,26 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
         private var beaconManager: BeaconManager? = null
         private var sharedMonitor: SharedMonitor? = null
 
-        fun init(application: Application, callback: OmnysBeaconsPlugin.BackgroundMonitoringCallback) {
+        fun init(
+            application: Application,
+            callback: OmnysBeaconsPlugin.BackgroundMonitoringCallback
+        ) {
+            val flutterLoader = FlutterLoader();
+            flutterLoader.startInitialization(application)
+            //ensures that the Flutter framework is initialized
+            flutterLoader.ensureInitializationComplete(application, null)
+
             beaconManager = BeaconManager.getInstanceForApplication(application)
 
             // Add parsing support for iBeacon
             // https://beaconlayout.wordpress.com/
             beaconManager!!.beaconParsers.clear()
             beaconManager!!.beaconParsers.add(BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24"))
-/*            beaconManager!!.beaconParsers.add(BeaconParser().setBeaconLayout("x,s:0-1=feaa,m:2-2=20,d:3-3,d:4-5,d:6-7,d:8-11,d:12-15"))
-            beaconManager!!.beaconParsers.add(BeaconParser().setBeaconLayout("s:0-1=feaa,m:2-2=00,p:3-3:-41,i:4-13,i:14-19"))
-            beaconManager!!.beaconParsers.add(BeaconParser().setBeaconLayout("s:0-1=feaa,m:2-2=10,p:3-3:-41,i:4-20v"))*/
+            /*            beaconManager!!.beaconParsers.add(BeaconParser().setBeaconLayout("x,s:0-1=feaa,m:2-2=20,d:3-3,d:4-5,d:6-7,d:8-11,d:12-15"))
+                        beaconManager!!.beaconParsers.add(BeaconParser().setBeaconLayout("s:0-1=feaa,m:2-2=00,p:3-3:-41,i:4-13,i:14-19"))
+                        beaconManager!!.beaconParsers.add(BeaconParser().setBeaconLayout("s:0-1=feaa,m:2-2=10,p:3-3:-41,i:4-20v"))*/
 
-            sharedMonitor = SharedMonitor(application, callback)
+            sharedMonitor = SharedMonitor(application, flutterLoader, callback)
         }
     }
 
@@ -76,19 +85,23 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
     // Beacons api
 
     fun configure(settings: Settings) {
+        sharedMonitor!!.configure()
         when (settings.logs) {
             Settings.Logs.Empty -> {
                 LogManager.setVerboseLoggingEnabled(false)
                 LogManager.setLogger(Loggers.empty())
             }
+
             Settings.Logs.Info -> {
                 LogManager.setVerboseLoggingEnabled(false)
                 LogManager.setLogger(Loggers.infoLogger())
             }
+
             Settings.Logs.Warning -> {
                 LogManager.setVerboseLoggingEnabled(false)
                 LogManager.setLogger(Loggers.warningLogger())
             }
+
             Settings.Logs.Verbose -> {
                 LogManager.setVerboseLoggingEnabled(true)
                 LogManager.setLogger(Loggers.verboseLogger())
@@ -105,6 +118,7 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
         Log.d(Tag, "removeBackgroundMonitoringListener")
         sharedMonitor!!.removeBackgroundListener(listener)
     }
+
     var mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
 
     @SuppressLint("MissingPermission")
@@ -146,7 +160,8 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
     }
 
     suspend fun startMonitoring(request: DataRequest): Result {
-        val operation = Operation(Operation.Kind.Monitoring, request.region, request.inBackground, null)
+        val operation =
+            Operation(Operation.Kind.Monitoring, request.region, request.inBackground, null)
         requests.add(operation)
 
         val result = permissionClient.request(request.permission)
@@ -163,13 +178,18 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
     }
 
     fun stopMonitoring(region: RegionModel) {
-        val toRemove = requests.filter { it.kind == Operation.Kind.Monitoring && it.region.identifier == region.identifier }
+        val toRemove =
+            requests.filter { it.kind == Operation.Kind.Monitoring && it.region.identifier == region.identifier }
         if (toRemove.isEmpty()) return
 
         toRemove.forEach { stopRequest(it) }
         requests.removeAll(toRemove)
     }
 
+
+    fun registerBackgroundCallback(backgroundCallbackHandle: Long) {
+        sharedMonitor!!.registerBackgroundCallback(backgroundCallbackHandle)
+    }
 
     // Lifecycle api
 
@@ -179,8 +199,9 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
         beaconManager!!.backgroundMode = false
 
         requests.filter { !it.isRunning }
-                .forEach { startRequest(it) }
+            .forEach { startRequest(it) }
     }
+
 
     fun pause() {
         isPaused = true
@@ -188,9 +209,8 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
         beaconManager!!.backgroundMode = true
 
         requests.filter { it.isRunning && !it.inBackground }
-                .forEach { stopRequest(it) }
+            .forEach { stopRequest(it) }
     }
-
 
     // Internals
 
@@ -198,7 +218,10 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
         if (!isServiceConnected) return
 
         if (requests.count { it.region.identifier == request.region.identifier && it.kind == request.kind && it.isRunning } == 0) {
-            Log.d(Tag, "start ${request.kind} (inBackground:${request.inBackground}) for region: ${request.region.identifier}")
+            Log.d(
+                Tag,
+                "start ${request.kind} (inBackground:${request.inBackground}) for region: ${request.region.identifier}"
+            )
 
             when (request.kind) {
                 Operation.Kind.Ranging -> beaconManager!!.startRangingBeaconsInRegion(request.region.frameworkValue)
@@ -209,12 +232,16 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
         request.isRunning = true
     }
 
+
     private fun stopRequest(request: Operation) {
         request.isRunning = false
         if (!isServiceConnected) return
 
         if (requests.count { it.region.identifier == request.region.identifier && it.kind == request.kind && it.isRunning } == 0) {
-            Log.d(Tag, "stop ${request.kind} (inBackground:${request.inBackground}) for region: ${request.region.identifier}")
+            Log.d(
+                Tag,
+                "stop ${request.kind} (inBackground:${request.inBackground}) for region: ${request.region.identifier}"
+            )
             when (request.kind) {
                 Operation.Kind.Ranging -> beaconManager!!.stopRangingBeaconsInRegion(request.region.frameworkValue)
                 Operation.Kind.Monitoring -> sharedMonitor!!.stop(request.region)
@@ -222,15 +249,21 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
         }
     }
 
-
     // RangeNotifier
+
 
     override fun didRangeBeaconsInRegion(beacons: MutableCollection<Beacon>, region: Region) {
         requests.filter { it.callback != null }
-                .filter { it.kind == Operation.Kind.Ranging && it.region.identifier == region.uniqueId }
-                .forEach { it.callback!!(Result.success(beacons.map { BeaconModel.parse(it) }, RegionModel.parse(region))) }
+            .filter { it.kind == Operation.Kind.Ranging && it.region.identifier == region.uniqueId }
+            .forEach {
+                it.callback!!(
+                    Result.success(
+                        beacons.map { BeaconModel.parse(it) },
+                        RegionModel.parse(region)
+                    )
+                )
+            }
     }
-
 
     // MonitoringNotifier
 
@@ -241,17 +274,31 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
     override fun didEnterRegion(region: Region) {
         Log.d(Tag, "didEnterRegion: ${region.uniqueId}")
         requests.filter { it.callback != null }
-                .filter { it.kind == Operation.Kind.Monitoring && it.region.identifier == region.uniqueId }
-                .forEach { it.callback!!(Result.success(MonitoringState.EnterOrInside, RegionModel.parse(region))) }
+            .filter { it.kind == Operation.Kind.Monitoring && it.region.identifier == region.uniqueId }
+            .forEach {
+                it.callback!!(
+                    Result.success(
+                        MonitoringState.EnterOrInside,
+                        RegionModel.parse(region)
+                    )
+                )
+            }
     }
+
 
     override fun didExitRegion(region: Region) {
         Log.d(Tag, "didExitRegion: ${region.uniqueId}")
         requests.filter { it.callback != null }
-                .filter { it.kind == Operation.Kind.Monitoring && it.region.identifier == region.uniqueId }
-                .forEach { it.callback!!(Result.success(MonitoringState.ExitOrOutside, RegionModel.parse(region))) }
+            .filter { it.kind == Operation.Kind.Monitoring && it.region.identifier == region.uniqueId }
+            .forEach {
+                it.callback!!(
+                    Result.success(
+                        MonitoringState.ExitOrOutside,
+                        RegionModel.parse(region)
+                    )
+                )
+            }
     }
-
 
     // BeaconsConsumer
 
@@ -273,8 +320,8 @@ class BeaconsClient(private val permissionClient: PermissionClient) : BeaconCons
         beaconManager!!.addMonitorNotifier(sharedMonitor!!);
 
         requests
-                .filter { !it.isRunning && (!isPaused || it.inBackground) }
-                .forEach { startRequest(it) }
+            .filter { !it.isRunning && (!isPaused || it.inBackground) }
+            .forEach { startRequest(it) }
     }
 
     class Operation(
